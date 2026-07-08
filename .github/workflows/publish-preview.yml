@@ -18,15 +18,15 @@ jobs:
       - name: Create preview website
         env:
           SLUG: ${{ github.event.client_payload.slug }}
-          HTML_B64: ${{ github.event.client_payload.html_b64 }}
+          HTML: ${{ github.event.client_payload.html }}
         run: |
           if [ -z "$SLUG" ]; then
             echo "Missing slug"
             exit 1
           fi
 
-          if [ -z "$HTML_B64" ]; then
-            echo "Missing html_b64"
+          if [ -z "$HTML" ]; then
+            echo "Missing html"
             exit 1
           fi
 
@@ -38,7 +38,7 @@ jobs:
           fi
 
           mkdir -p "$SAFE_SLUG"
-          echo "$HTML_B64" | base64 --decode > "$SAFE_SLUG/index.html"
+          printf "%s" "$HTML" > "$SAFE_SLUG/index.html"
 
       - name: Commit and push changes
         run: |
