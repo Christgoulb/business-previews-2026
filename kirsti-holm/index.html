@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirsti Holm | Hypnotherapy service in London</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --text: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #fbbc05;
+      --card: #ffffff;
+      --dark: #0f172a;
+      --success: #16a34a;
+      --radius: 22px;
+      --shadow: 0 20px 50px rgba(15, 23, 42, 0.10);
+      --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+
+    .topbar {
+      background: var(--dark);
+      color: #dbeafe;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: 22px;
+      color: var(--dark);
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), #60a5fa);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.28);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 15px;
+      color: #374151;
+      font-weight: 600;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 22px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28);
+    }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-light { background: white; color: var(--dark); box-shadow: var(--shadow-soft); }
+    .btn-outline { border: 1px solid var(--line); color: var(--dark); background: white; }
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(120deg, rgba(15,23,42,.88), rgba(15,23,42,.50)), url('') center/cover no-repeat;
+      color: white;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 160px;
+      background: linear-gradient(to top, white, transparent);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 100px 0 130px;
+      max-width: 760px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.20);
+      backdrop-filter: blur(10px);
+      color: #eff6ff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: .96;
+      letter-spacing: -0.065em;
+      margin-bottom: 22px;
+    }
+    .hero p {
+      font-size: clamp(18px, 2.5vw, 23px);
+      color: #e5e7eb;
+      max-width: 660px;
+      margin-bottom: 32px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
+    .review-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 14px 18px;
+      color: white;
+      font-weight: 800;
+    }
+    .stars { color: var(--accent); letter-spacing: 2px; }
+    .review-pill span:last-child { color: #e5e7eb; font-weight: 600; }
+
+    section { padding: 92px 0; }
+    .section-head { max-width: 720px; margin: 0 auto 46px; text-align: center; }
+    .section-kicker {
+      color: var(--primary);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      margin-bottom: 16px;
+    }
+    .section-head p { color: var(--muted); font-size: 18px; }
+
+    .trust-strip {
+      margin-top: -70px;
+      position: relative;
+      z-index: 10;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .trust-item {
+      padding: 20px;
+      border-radius: 18px;
+      background: var(--bg-soft);
+    }
+    .trust-item strong { display: block; font-size: 20px; margin-bottom: 4px; }
+    .trust-item span { color: var(--muted); font-size: 14px; }
+
+    .services { background: var(--bg-soft); }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+    .service-card, .why-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .service-card:hover, .why-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: #dbeafe;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+    .service-card h3, .why-card h3 { font-size: 20px; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .service-card p, .why-card p { color: var(--muted); }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 54px;
+      align-items: center;
+    }
+    .feature-panel {
+      border-radius: 32px;
+      min-height: 520px;
+      background: linear-gradient(135deg, rgba(37,99,235,.94), rgba(15,23,42,.86)), url('') center/cover no-repeat;
+      box-shadow: var(--shadow);
+      padding: 34px;
+      display: flex;
+      align-items: flex-end;
+      color: white;
+      overflow: hidden;
+    }
+    .panel-card {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(14px);
+      border-radius: 24px;
+      padding: 26px;
+      width: 100%;
+    }
+    .panel-card h3 { font-size: 26px; margin-bottom: 10px; }
+    .panel-card p { color: #e5e7eb; }
+    .copy p { color: var(--muted); font-size: 18px; margin-bottom: 18px; }
+    .check-list { list-style: none; margin-top: 24px; display: grid; gap: 12px; }
+    .check-list li { display: flex; gap: 10px; color: #374151; font-weight: 650; }
+    .check-list li::before { content: "✓"; color: var(--success); font-weight: 900; }
+
+    .why { background: var(--bg-soft); }
+    .reviews-wrap {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      border-radius: 34px;
+      color: white;
+      padding: 46px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .google-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: var(--dark);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+    .g-dot { width: 22px; height: 22px; border-radius: 50%; background: conic-gradient(#4285f4 0 25%, #34a853 0 50%, #fbbc05 0 75%, #ea4335 0); }
+    .rating-number { font-size: 72px; line-height: 1; font-weight: 900; letter-spacing: -0.06em; }
+    .review-quote {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 24px;
+      padding: 28px;
+    }
+    .review-quote p { color: #e5e7eb; font-size: 19px; }
+
+    .contact-section { background: var(--bg-soft); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 24px;
+    }
+    .contact-card, .form-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow-soft);
+      padding: 34px;
+    }
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-row:last-child { border-bottom: 0; }
+    .contact-row strong { display: block; margin-bottom: 2px; }
+    .contact-row span, .contact-row a { color: var(--muted); }
+    form { display: grid; gap: 14px; }
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      border-radius: 16px;
+      padding: 15px 16px;
+      font: inherit;
+      outline: none;
+    }
+    input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(37,99,235,.10); }
+    textarea { min-height: 130px; resize: vertical; }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 54px 0 28px;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      padding-bottom: 32px;
+      margin-bottom: 24px;
+    }
+    footer p, footer a { color: #cbd5e1; }
+    .copyright { color: #94a3b8; font-size: 14px; }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .hero { min-height: 640px; }
+      .trust-grid, .card-grid { grid-template-columns: repeat(2, 1fr); }
+      .split, .reviews-wrap, .contact-grid { grid-template-columns: 1fr; }
+      .feature-panel { min-height: 420px; }
+    }
+    @media (max-width: 560px) {
+      .topbar .container { display: block; }
+      .nav { height: auto; padding: 16px 0; }
+      .brand { font-size: 18px; }
+      .brand-mark { width: 38px; height: 38px; }
+      .hero-content { padding: 78px 0 120px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .trust-grid, .card-grid { grid-template-columns: 1fr; }
+      section { padding: 70px 0; }
+      .reviews-wrap, .contact-card, .form-card { padding: 26px; }
+      .rating-number { font-size: 56px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Shirehall Park, London NW4 2QX • +44 20 8202 3654</span>
+      <a href="tel:+442082023654">Call Kirsti Holm</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Kirsti Holm home">
+        <span class="brand-mark">KH</span>
+        <span>Kirsti Holm</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="tel:+442082023654">Call Now</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Trusted local hypnotherapy service in London</div>
+        <h1>Professional hypnotherapy in London</h1>
+        <p>Transform your life with expert hypnotherapy services from Kirsti Holm in London. Personalised sessions to help you achieve your goals.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+442082023654">Call Kirsti Holm</a>
+          <a class="btn btn-light" href="#contact">Request a Call Back</a>
+        </div>
+        <a class="review-pill" href="https://www.google.com/maps/place/Kirsti+Holm/@51.579574,-0.2150031,14z/data=!4m8!1m2!2m1!1sKirsti+Holm!3m4!1s0x487610c050707619:0x584beb1608cffc6!8m2!3d51.579574!4d-0.2150031" target="_blank" rel="noopener">
+          <span class="stars">★★★★★</span>
+          <span> from Google reviews</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="container trust-strip">
+      <div class="trust-grid">
+        <div class="trust-item"><strong>5.0</strong><span>Google reviews</span></div>
+        <div class="trust-item"><strong>★★★★★</strong><span>Google rating</span></div>
+        <div class="trust-item"><strong>London</strong><span>Local business</span></div>
+        <div class="trust-item"><strong>Fast</strong><span>Easy to contact</span></div>
+      </div>
+    </div>
+
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">What we do</div>
+          <h2>Hypnotherapy services</h2>
+          <p>Professional hypnotherapy services to help you make positive changes in your life</p>
+        </div>
+        <div class="card-grid">
+          <article class="service-card"><div class="icon">🧠</div><h3>Stress Reduction</h3><p>Learn techniques to manage and reduce stress through hypnotherapy</p></article>
+          <article class="service-card"><div class="icon">😴</div><h3>Sleep Improvement</h3><p>Overcome insomnia and achieve better quality sleep</p></article>
+          <article class="service-card"><div class="icon">🚭</div><h3>Smoking Cessation</h3><p>Break free from nicotine addiction with hypnotherapy</p></article>
+          <article class="service-card"><div class="icon">💪</div><h3>Confidence Building</h3><p>Boost self-esteem and confidence through targeted sessions</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div class="copy">
+          <div class="section-kicker">About Kirsti Holm</div>
+          <h2>Professional hypnotherapist in London</h2>
+          <p>Kirsti Holm is a qualified hypnotherapist serving clients in London and surrounding areas.</p>
+          <p>With years of experience, Kirsti provides personalised hypnotherapy sessions to help clients achieve their goals and make positive changes in their lives.</p>
+          <ul class="check-list">
+            <li>Professional, friendly and easy to contact</li>
+            <li>Serving customers in London and nearby areas</li>
+            <li>Clear information and simple next steps</li>
+          </ul>
+        </div>
+        <div class="feature-panel">
+          <div class="panel-card">
+            <h3>Personalised approach</h3>
+            <p>Every session is tailored to your specific needs and goals for maximum effectiveness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-kicker">Why choose us</div>
+          <h2>Why choose Kirsti Holm</h2>
+          <p>What makes our hypnotherapy services stand out</p>
+        </div>
+        <div class="card-grid">
+          <article class="why-card"><div class="icon">✓</div><h3>Local</h3><p>Conveniently located in London for easy access</p></article>
+          <article class="why-card"><div class="icon">★</div><h3>Trusted</h3><p>Professional service with excellent client feedback</p></article>
+          <article class="why-card"><div class="icon">☎</div><h3>Easy to contact</h3><p>Quick response times and flexible appointment scheduling</p></article>
+          <article class="why-card"><div class="icon">→</div><h3>Clear next steps</h3><p>Straightforward process from initial consultation to results</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="reviews-wrap">
+          <div>
+            <div class="google-badge"><span class="g-dot"></span><span>Google Reviews</span></div>
+            <div class="rating-number">5.0</div>
+            <div class="stars">★★★★★</div>
+            <p>Google reviews</p>
+            <a class="btn btn-light" href="https://www.google.com/maps/place/Kirsti+Holm/@51.579574,-0.2150031,14z/data=!4m8!1m2!2m1!1sKirsti+Holm!3m4!1s0x487610c050707619:0x584beb1608cffc6!8m2!3d51.579574!4d-0.2150031" target="_blank" rel="noopener">View Reviews on Google</a>
+          </div>
+          <div class="review-quote">
+            <p>"Kirsti helped me overcome my anxiety with just a few sessions. Professional, caring and effective - highly recommended!"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <div class="section-kicker">Find us</div>
+          <h2>Contact Kirsti Holm</h2>
+          <div class="contact-row"><div class="icon">☎</div><div><strong>Phone</strong><a href="tel:+442082023654">+44 20 8202 3654</a></div></div>
+          <div class="contact-row"><div class="icon">⌖</div><div><strong>Address</strong><span>Shirehall Park, London NW4 2QX</span></div></div>
+          <div class="contact-row"><div class="icon">★</div><div><strong>Google Reviews</strong><span>from reviews</span></div></div>
+          <a class="btn btn-outline" href="https://www.google.com/maps/place/Kirsti+Holm/@51.579574,-0.2150031,14z/data=!4m8!1m2!2m1!1sKirsti+Holm!3m4!1s0x487610c050707619:0x584beb1608cffc6!8m2!3d51.579574!4d-0.2150031" target="_blank" rel="noopener">View on Google Maps</a>
+        </div>
+        <div class="form-card">
+          <h2>Request a call back</h2>
+          <p style="color: var(--muted); margin-bottom: 20px;">Leave your details and the team at Kirsti Holm can get back to you.</p>
+          <form>
+            <input type="text" placeholder="Your name" required />
+            <input type="tel" placeholder="Your phone number" required />
+            <input type="email" placeholder="Your email address" />
+            <textarea placeholder="How can we help?"></textarea>
+            <button class="btn btn-primary" type="submit">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color:white;"><span class="brand-mark">KH</span><span>Kirsti Holm</span></div>
+          <p style="margin-top:14px; max-width: 460px;">Professional hypnotherapy services in London helping clients achieve positive change.</p>
+        </div>
+        <div>
+          <p><strong>Phone:</strong> <a href="tel:+442082023654">+44 20 8202 3654</a></p>
+          <p><strong>Address:</strong> Shirehall Park, London NW4 2QX</p>
+        </div>
+      </div>
+      <p class="copyright">© Kirsti Holm. Website preview created for demonstration purposes.</p>
+    </div>
+  </footer>
+</body>
+</html>
