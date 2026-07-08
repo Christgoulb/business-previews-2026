@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Hypnotherapy Crouch End | Professional Hypnotherapy Services in London</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #333;
+            --accent: #e67e22;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --text: #333;
+            --text-light: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+        }
+        
+        .hero {
+            background-color: var(--light);
+            padding: 180px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-light);
+        }
+        
+        .services {
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card h3 {
+            color: var(--primary);
+        }
+        
+        .about {
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .why-choose-us {
+            background-color: white;
+        }
+        
+        .benefits {
+            margin-top: 50px;
+        }
+        
+        .benefit-item {
+            margin-bottom: 30px;
+        }
+        
+        .benefit-item h3 {
+            color: var(--primary);
+        }
+        
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+        }
+        
+        .contact {
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+        }
+        
+        .contact-info p {
+            margin-bottom: 30px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+        }
+        
+        .location {
+            background-color: var(--light);
+        }
+        
+        .location-content {
+            margin-top: 50px;
+        }
+        
+        .address {
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-left: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-links {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Total Hypnotherapy Crouch End</div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Your Life with Professional Hypnotherapy</h1>
+            <p>Total Hypnotherapy Crouch End provides expert hypnotherapy services in London to help you overcome challenges and achieve your goals.</p>
+            <a href="#contact" class="btn btn-accent">Book Your Session Today</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <p class="text-center">We offer a range of hypnotherapy services tailored to your individual needs.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Anxiety & Stress Relief</h3>
+                    <p>Reduce anxiety and manage stress through powerful hypnotherapy techniques that promote relaxation and mental clarity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Smoking Cessation</h3>
+                    <p>Break free from nicotine addiction with our proven hypnotherapy program designed to eliminate cravings.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Weight Management</h3>
+                    <p>Develop a healthier relationship with food and achieve sustainable weight loss through subconscious reprogramming.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Confidence Building</h3>
+                    <p>Boost your self-esteem and overcome self-doubt with hypnotherapy techniques that reinforce positive beliefs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Total Hypnotherapy Crouch End is a leading hypnotherapy practice serving the London area. Our mission is to help clients overcome personal challenges and achieve their full potential through the power of hypnotherapy.</p>
+                    <p>With years of experience and a compassionate approach, we create customized treatment plans that address each client's unique needs and goals.</p>
+                    <p>Our practice is conveniently located in Muswell Hill, making our services easily accessible to residents throughout North London.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            <h2 class="text-center">Why Choose Total Hypnotherapy Crouch End</h2>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <h3>Expert Practitioners</h3>
+                    <p>Our hypnotherapists are highly trained and experienced professionals who stay current with the latest techniques and research in the field.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h3>Personalized Approach</h3>
+                    <p>We understand that every client is unique, which is why we tailor our sessions to your specific needs and goals.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h3>Proven Results</h3>
+                    <p>Our evidence-based techniques have helped countless clients achieve lasting change and improve their quality of life.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h3>Comfortable Environment</h3>
+                    <p>Our practice provides a safe, welcoming space where you can relax and focus on your personal growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="text-center">Client Testimonials</h2>
+            <p class="text-center">Hear what our clients say about their experiences with Total Hypnotherapy Crouch End.</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"After just three sessions, my anxiety levels decreased significantly. I now have tools to manage stress that I use every day."</p>
+                    <p class="testimonial-author">- Sarah J.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I was skeptical at first, but hypnotherapy helped me quit smoking after 15 years. It's been six months and I haven't looked back."</p>
+                    <p class="testimonial-author">- Michael T.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The confidence I gained through hypnotherapy has transformed both my personal and professional life. Highly recommended!"</p>
+                    <p class="testimonial-author">- Emma L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">Ready to begin your transformation? Get in touch to book your session.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone:</strong> <a href="tel:+447940824297">+44 7940 824297</a></p>
+                    <p><strong>Location:</strong> Muswell Healing Arts, 169 Ave Mews, Muswell Hill, London N10 3NN</p>
+                    <p>We're available for appointments Monday through Saturday.</p>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <textarea placeholder="How can we help you?" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="text-center">Find Us</h2>
+            
+            <div class="location-content">
+                <div class="address">
+                    <h3>Our Location</h3>
+                    <p>Muswell Healing Arts<br>
+                    169 Ave Mews<br>
+                    Muswell Hill<br>
+                    London N10 3NN</p>
+                </div>
+                
+                <a href="https://www.google.com/maps/place/Total+Hypnotherapy+Crouch+End/@51.5909013,-0.1433634,14z/data=!4m8!1m2!2m1!1sTotal+Hypnotherapy+Crouch+End!3m4!1s0x48761a2d1ae72f75:0x60ec0a3eb5f10186!8m2!3d51.5909013!4d-0.1433634" class="btn" target="_blank">View on Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2023 Total Hypnotherapy Crouch End. All rights reserved.</p>
+                </div>
+                
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simple form submission handler
+        const form = document.querySelector('.contact-form form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message. We will contact you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
