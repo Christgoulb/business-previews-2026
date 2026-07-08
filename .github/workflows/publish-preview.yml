@@ -1,0 +1,50 @@
+name: Publish Preview
+
+on:
+  repository_dispatch:
+    types: [publish_preview]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create preview website
+        env:
+          SLUG: ${{ github.event.client_payload.slug }}
+          HTML_B64: ${{ github.event.client_payload.html_b64 }}
+        run: |
+          if [ -z "$SLUG" ]; then
+            echo "Missing slug"
+            exit 1
+          fi
+
+          if [ -z "$HTML_B64" ]; then
+            echo "Missing html_b64"
+            exit 1
+          fi
+
+          SAFE_SLUG=$(echo "$SLUG" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9-')
+
+          if [ -z "$SAFE_SLUG" ]; then
+            echo "Invalid slug"
+            exit 1
+          fi
+
+          mkdir -p "$SAFE_SLUG"
+          echo "$HTML_B64" | base64 --decode > "$SAFE_SLUG/index.html"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GoldRiver Publisher"
+          git config user.email "publisher@goldrivermarketing.co.uk"
+
+          git add .
+          git commit -m "Publish preview website" || echo "No changes to commit"
+          git push
