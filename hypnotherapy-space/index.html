@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypnotherapy Space | Website Preview</title>
+    <style>
+        :root {
+            --charcoal: #2C3E50;
+            --gold: #D4AF37;
+            --offwhite: #F5F5F5;
+            --softgrey: #E0E0E0;
+            --darkoverlay: rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            color: var(--charcoal);
+            background-color: var(--offwhite);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gold);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--gold);
+            color: var(--charcoal);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--gold);
+            color: var(--charcoal);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1a1a2e 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+            }
+        }
+
+        /* Preview Intro */
+        .preview-intro {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .preview-intro h2 {
+            margin-bottom: 20px;
+        }
+
+        .preview-intro p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Services */
+        .services {
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        /* Why It Works */
+        .why-it-works {
+            background: var(--charcoal);
+            color: white;
+        }
+
+        .why-it-works h2:after {
+            background: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .benefit-card h3 {
+            color: var(--gold);
+        }
+
+        /* About */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            padding-right: 30px;
+        }
+
+        .about-visual {
+            height: 400px;
+            background: linear-gradient(135deg, var(--softgrey) 0%, var(--offwhite) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            font-weight: 600;
+        }
+
+        /* Find Us */
+        .find-us {
+            background: var(--offwhite);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .address {
+            font-style: normal;
+        }
+
+        .address p {
+            margin-bottom: 10px;
+        }
+
+        .map-container {
+            height: 300px;
+            background: var(--softgrey);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* CTA */
+        .final-cta {
+            text-align: center;
+            padding: 100px 0;
+            background: white;
+        }
+
+        .final-cta h2 {
+            margin-bottom: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .about-content,
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Complimentary website preview • Created exclusively for Hypnotherapy Space</span>
+            <h1>I built this website for Hypnotherapy Space</h1>
+            <p>A website you will be proud to share. Built to earn trust, attract customers and grow your business.</p>
+            <a href="#cta" class="btn">Make this website mine</a>
+        </div>
+        <div class="scroll-indicator">Scroll to explore your website preview</div>
+        <div class="floating-cta">
+            <a href="#cta" class="btn">Make this website mine</a>
+        </div>
+    </section>
+
+    <!-- Preview Intro -->
+    <section class="preview-intro">
+        <div class="container">
+            <h2>Your premium hypnotherapy website</h2>
+            <p>This preview showcases what your new GoldRiver Signature website could look like. Designed specifically for Hypnotherapy Space, this website combines elegant design with powerful functionality to help you stand out in London.</p>
+            <a href="#cta" class="btn btn-outline">Claim this design</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2>Specialised Hypnotherapy Services</h2>
+            <p>We help clients overcome challenges and achieve their goals through evidence-based hypnotherapy techniques.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Anxiety Relief</h3>
+                    <p>Reduce stress and anxiety through powerful hypnotherapy sessions tailored to your specific needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Smoking Cessation</h3>
+                    <p>Break free from nicotine addiction with our proven hypnotherapy programme for smokers.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Weight Management</h3>
+                    <p>Transform your relationship with food and achieve your healthy weight goals naturally.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Confidence Building</h3>
+                    <p>Boost self-esteem and overcome limiting beliefs with our confidence-building sessions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sleep Improvement</h3>
+                    <p>Rediscover restful sleep through hypnotherapy techniques that address the root causes of insomnia.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Phobia Treatment</h3>
+                    <p>Overcome fears and phobias quickly and effectively with our specialised hypnotherapy approach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Works -->
+    <section class="why-it-works">
+        <div class="container">
+            <h2>Why This Website Works</h2>
+            <p>A premium website designed to convert visitors into clients and reflect the quality of your hypnotherapy practice.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Professional First Impression</h3>
+                    <p>Your website is often the first interaction potential clients have with your practice. Make it count with a design that builds immediate trust.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Mobile Optimised</h3>
+                    <p>With over 60% of web traffic coming from mobile devices, your website looks and works perfectly on all screen sizes.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Clear Call-to-Actions</h3>
+                    <p>Strategically placed buttons and contact forms make it easy for visitors to book consultations and get in touch.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>SEO Ready</h3>
+                    <p>Built with search engine optimisation in mind to help potential clients in London find your services more easily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+            <h2>About Hypnotherapy Space</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hypnotherapy Space is a leading hypnotherapy practice located in the heart of London, dedicated to helping clients achieve meaningful and lasting change.</p>
+                    <p>Our approach combines traditional hypnotherapy techniques with modern therapeutic methods to address a wide range of issues, from anxiety and stress to habit change and performance improvement.</p>
+                    <p>Located at 307 Regents Park Rd, London N3 1DP, we provide a calm, welcoming environment where clients can feel safe to explore and overcome their challenges.</p>
+                </div>
+                <div class="about-visual">
+                    Hypnotherapy Space Practice Visual
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Us -->
+    <section class="find-us">
+        <div class="container">
+            <h2>Find Us in London</h2>
+            <p>Visit our practice in Finchley for personalised hypnotherapy sessions.</p>
+            
+            <div class="contact-info">
+                <div class="address">
+                    <h3>Our Location</h3>
+                    <p>307 Regents Park Rd</p>
+                    <p>London N3 1DP</p>
+                    <p>United Kingdom</p>
+                    <p>Phone: +55 788083330</p>
+                </div>
+                <div class="map-container">
+                    <a href="https://www.google.com/maps/place/Hypnotherapy+Space/@51.5992986,-0.19633399999999998,14z/data=!4m8!1m2!2m1!1sHypnotherapy+Space!3m4!1s0x487617533405aaab:0x29a571f05a9b311e!8m2!3d51.5992986!4d-0.19633399999999998" class="btn">View on Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="cta">
+        <div class="container">
+            <h2>Ready to claim this website?</h2>
+            <p>This premium website design can be yours. Get in touch to discuss how we can launch your new online presence.</p>
+            <a href="#" class="btn">Make this website mine</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple animation for service cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .benefit-card').forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
