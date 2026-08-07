@@ -4,7 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{BUSINESS_NAME}} | Website Preview by GoldRiver Marketing</title>
-  <meta name="description" content="A complimentary website preview created for {{BUSINESS_NAME}} by GoldRiver Marketing." />
+  <meta name="description" content="{{CATEGORY}} in {{CITY}} — {{BUSINESS_NAME}}. Rated {{RATING}} from {{REVIEWS}} Google reviews. Call {{PHONE}} or get in touch today." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='20'%20fill='%23121212'/%3E%3Ctext%20x='50'%20y='68'%20font-size='55'%20text-anchor='middle'%20fill='%23b88a3b'%20font-family='Arial'%3EG%3C/text%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{BUSINESS_NAME}} — {{CATEGORY}} in {{CITY}}" />
+  <meta property="og:description" content="{{CATEGORY}} in {{CITY}} — rated {{RATING}} from {{REVIEWS}} Google reviews. Call {{PHONE}} or get in touch today." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=85" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{BUSINESS_NAME}}",
+    "description": "{{CATEGORY}} in {{CITY}}",
+    "telephone": "{{PHONE}}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ADDRESS}}",
+      "addressLocality": "{{CITY}}",
+      "postalCode": "{{POSTCODE}}",
+      "addressCountry": "GB"
+    },
+    "hasMap": "{{GOOGLE_MAPS_LINK}}"
+  }
+  </script>
   <style>
     :root {
       --bg: #f7f4ee;
@@ -78,9 +103,9 @@
       background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); backdrop-filter: blur(18px);
       font-size: 14px; color: rgba(255,255,255,.88);
     }
-    .reveal h1 {
+    .reveal .reveal-title {
       font-size: clamp(52px, 9vw, 128px); line-height: .86; letter-spacing: -.075em; margin: 28px 0 22px;
-      max-width: 950px;
+      max-width: 950px; font-weight: 800;
     }
     .reveal p { font-size: clamp(18px, 2.2vw, 28px); max-width: 760px; color: rgba(255,255,255,.82); margin: 0 0 34px; }
     .reveal-note { display: inline-flex; align-items: center; gap: 10px; color: rgba(255,255,255,.86); font-weight: 800; letter-spacing: -.02em; }
@@ -96,6 +121,12 @@
     .mark { width: 40px; height: 40px; border-radius: 12px; background: var(--ink); color: white; display: grid; place-items: center; font-size: 13px; }
     .nav-links { display: flex; gap: 24px; align-items: center; color: var(--muted); font-size: 14px; }
     .nav-cta { display: flex; gap: 10px; align-items: center; }
+    .nav-mobile { display: none; position: relative; }
+    .nav-mobile summary { list-style: none; cursor: pointer; font-size: 20px; width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+    .nav-mobile summary::-webkit-details-marker { display: none; }
+    .nav-mobile-links { position: absolute; right: 0; top: 52px; z-index: 60; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-soft); display: grid; gap: 4px; padding: 12px; min-width: 190px; }
+    .nav-mobile-links a { padding: 10px 14px; border-radius: 10px; font-weight: 600; }
+    .nav-mobile-links a:hover { background: var(--soft); }
 
     .hero { padding: 84px 0 42px; }
     .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 26px; align-items: stretch; }
@@ -103,7 +134,7 @@
       background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: clamp(28px, 5vw, 62px); box-shadow: var(--shadow-soft);
       min-height: 620px; display: flex; flex-direction: column; justify-content: space-between;
     }
-    .hero h2 { font-size: clamp(44px, 6vw, 88px); line-height: .9; letter-spacing: -.07em; margin: 20px 0 22px; }
+    .hero h1 { font-size: clamp(44px, 6vw, 88px); line-height: .9; letter-spacing: -.07em; margin: 20px 0 22px; }
     .hero .lead { font-size: 22px; color: var(--muted); max-width: 580px; }
     .hero-image { border-radius: var(--radius-xl); overflow: hidden; min-height: 620px; position: relative; box-shadow: var(--shadow); background: #ddd; }
     .hero-image-clean { min-height: 620px; }
@@ -175,6 +206,7 @@
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .nav-mobile { display: block; }
       .hero-grid, .split, .reviews-grid, .map-grid, .contact-grid { grid-template-columns: 1fr; }
       .hero-copy, .hero-image { min-height: auto; }
       .hero-image { min-height: 420px; }
@@ -200,7 +232,7 @@
     <div class="reveal-inner">
       <div class="reveal-card">
         <div class="preview-pill">Complimentary website preview • Created exclusively for {{BUSINESS_NAME}}</div>
-        <h1>I built this website for {{BUSINESS_NAME}}.</h1>
+        <div class="reveal-title">I built this website for {{BUSINESS_NAME}}.</div>
         <p>A website you will be proud to share. Built to earn trust, attract customers and grow your business.</p>
         <div class="reveal-note"><span>↓</span> Scroll to explore your website preview</div>
       </div>
@@ -220,6 +252,16 @@
       </div>
       <div class="nav-cta">
         <a class="btn btn-light" href="tel:{{PHONE}}">Call {{PHONE}}</a>
+        <details class="nav-mobile">
+          <summary aria-label="Open navigation menu">☰</summary>
+          <div class="nav-mobile-links">
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#faq">Q&amp;A</a>
+            <a href="#find-us">Find Us</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </details>
       </div>
     </div>
   </nav>
@@ -230,7 +272,7 @@
         <div class="hero-copy">
           <div>
             <div class="eyebrow">{{CATEGORY}} in {{CITY}}</div>
-            <h2>{{HERO_HEADLINE}}</h2>
+            <h1>{{HERO_HEADLINE}}</h1>
             <p class="lead">{{HERO_SUBHEADLINE}}</p>
             <div class="review-float" style="position:static;margin-top:28px;max-width:420px;">
               <div>
@@ -374,7 +416,7 @@
         <strong>Crafted by GoldRiver Marketing</strong>
         <p>Helping local businesses own their digital future.</p>
       </div>
-      <a href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">goldrivermarketing.co.uk</a>
+      <a href="https://www.goldrivermarketing.co.uk/" target="_blank" rel="noopener">goldrivermarketing.co.uk</a>
     </div>
   </footer>
 
@@ -387,6 +429,8 @@
       anchor.addEventListener('click', function(e){
         var target = document.querySelector(this.getAttribute('href'));
         if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+        var menu = this.closest('details.nav-mobile');
+        if(menu){ menu.removeAttribute('open'); }
       });
     });
   </script>

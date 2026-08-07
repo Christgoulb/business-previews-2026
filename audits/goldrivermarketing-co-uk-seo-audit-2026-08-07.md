@@ -263,3 +263,23 @@ Live-site architecture and title findings were drawn from search-engine index da
 Repository HTML audited in full: `goldriver-template.html` and the published previews `hypnomind-london-clinical-hypnotherapy`, `hypnotherapy-space`, `kirsti-holm`, `nutritionist-london`, `stop-smoking-hypnotherapy-clinic`, `total-hypnotherapy-crouch-end`.
 
 *Recommended follow-up: once crawler access to the live domain is available, run a full technical crawl (Screaming Frog or Sitebulb) plus Core Web Vitals field data (PageSpeed Insights / CrUX) to verify live-page meta descriptions, schema, canonical implementation, and page speed.*
+
+---
+
+## Addendum — Fixes applied (7 August 2026)
+
+The following items were fixed directly in this repository on the date of the audit:
+
+| Audit ref | Fix | Where |
+|---|---|---|
+| 1.1 | `<meta name="robots" content="noindex, nofollow">` added | Template + all 6 preview pages |
+| 1.3 | Templated LocalBusiness JSON-LD schema added (activates with real NAP data on client conversion) | Template |
+| 2.3 | Templated meta description added; unique descriptions written for the 5 preview pages missing one | Template + 5 preview pages |
+| 3.2 | Hero headline promoted to H1; reveal-screen line demoted to a styled `<div>` | Template |
+| 3.3 | Mobile hamburger menu added (shown below 900px, closes on tap) | Template |
+| 3.4 | Dead `href="#"` CTA links repaired (now open a pre-filled email to GoldRiver); footer link standardised to the www host | stop-smoking, hypnotherapy-space, template |
+| 4.1 | Open Graph + Twitter Card tags added | Template |
+| 4.2 | Favicon added (inline SVG, gold "G") | Template + all 6 preview pages |
+| 4.4 | `<link rel="preload">` added for the LCP hero image | Template + hypnomind preview |
+
+**Still outstanding (requires access to the live site / hosting):** www vs non-www 301 consolidation and canonical tags (1.2), schema on the live www pages (1.3), the `local.` subdomain title rewrite and consolidation (2.1, 2.2), live-site meta descriptions (2.3), converting CSS background images to `<img>` with alt text using the repository's WebP library (2.4), title standardisation across the live estate (3.1), wiring the contact forms to a form service (4.3), and the sitemap/robots.txt check (4.5). Note: already-published previews will only pick up these fixes if re-served from this repository; newly published previews inherit them automatically from the template.
