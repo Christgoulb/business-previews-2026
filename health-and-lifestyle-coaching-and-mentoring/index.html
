@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Lifestyle Coaching and Mentoring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .hero {
+            background: #f4f4f4;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .hero h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .hero .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        section {
+            margin: 40px 0;
+        }
+        h3 {
+            margin-bottom: 20px;
+            font-size: 1.75em;
+            color: #4CAF50;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f4f4f4;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Health and Lifestyle Coaching and Mentoring</h1>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h2>Transform Your Health and Lifestyle Today</h2>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </div>
+
+    <section class="services">
+        <div class="container">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Personalized Health Coaching</li>
+                <li>Nutritional Guidance</li>
+                <li>Stress Management Techniques</li>
+                <li>Lifestyle Transformation Programs</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h3>About Us</h3>
+            <p>At Health and Lifestyle Coaching and Mentoring, we are dedicated to helping individuals achieve their health and lifestyle goals through personalized coaching and mentoring. Located in London, we provide tailored solutions to improve your overall well-being.</p>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Experienced and Professional Coaches</li>
+                <li>Customized Plans to Meet Your Needs</li>
+                <li>Holistic Approach to Health and Wellness</li>
+                <li>Convenient Location in London</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <p>Phone: +44 7917 809341</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h3>Frequently Asked Questions</h3>
+            <ul>
+                <li><strong>How do I get a quote?</strong> Contact us directly via phone or the contact form above.</li>
+                <li><strong>What areas do you cover?</strong> We primarily serve clients in London.</li>
+                <li><strong>How can I contact the business by phone?</strong> Call us at +44 7917 809341.</li>
+                <li><strong>What services do you offer?</strong> We offer health and lifestyle coaching, nutritional guidance, stress management, and lifestyle transformation programs.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="find-us">
+        <div class="container">
+            <h3>Find Us</h3>
+            <p>30b Somali Rd, London NW2 3RL</p>
+            <a href="https://www.google.com/maps/place/Health+and+Lifestyle+Coaching+and+Mentoring/@51.5546936,-0.2050656,14z/data=!4m8!1m2!2m1!1sHealth+and+Lifestyle+Coaching+and+Mentoring!3m4!1s0x29fa557c89a62de5:0xdfc6c29b0fe44b5b!8m2!3d51.5546936!4d-0.2050656" class="btn" target="_blank">View on Google Maps</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Health and Lifestyle Coaching and Mentoring. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Additional JavaScript can be added here if needed
+    </script>
+
+</body>
+</html>
