@@ -112,6 +112,7 @@ textarea{min-height:110px;resize:vertical}
 .fnote{font-size:13px;color:var(--muted);margin:0}
 footer{background:var(--dark);color:rgba(255,255,255,.6);padding:34px 0;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.fbadge{background:#fff7e6;border:1px solid #f0c36d;color:#6b4a00;border-radius:10px;padding:10px 12px;font-size:13.5px;line-height:1.4;margin:0 0 12px}
 /* claim bar */
 .claim{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);box-shadow:0 -10px 40px rgba(0,0,0,.14)}
 .claim .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:12px;padding-bottom:12px}
@@ -165,7 +166,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="eyebrow">Made for <span id="y-name"></span></div>
       <h2>Your website. Your way.</h2>
       <p class="lead">We've created this complimentary website preview exclusively for your business. The design, colours, photographs, logo, wording and services can all be tailored to your preferences before your website goes live.</p>
-      <div class="cta-row" style="margin-top:26px"><a class="btn b-acc" id="y-claim" href="#">Make this website mine</a></div>
+      <div class="cta-row" style="margin-top:26px"><a class="btn b-acc" id="y-claim" href="#">Activate My Website</a></div>
     </div>
     <ul class="terms">
       <li><b>The website design is free.</b><span>No design fee, and no obligation to claim this preview.</span></li>
@@ -222,12 +223,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="info" id="info"></div>
   </div>
   <form id="form" onsubmit="return false">
+    <div class="fbadge" id="fbadge" role="note"><b>Preview only.</b> This form is not active yet and nothing you type here is sent.</div>
     <h3>Send a message</h3>
+    <input type="text" name="company_website" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <label>Name<input placeholder="Your name"></label>
     <label>Phone<input placeholder="Best number to reach you"></label>
     <label>How can we help?<textarea placeholder="Tell us a little about what you need"></textarea></label>
     <button class="btn b-acc" type="button" id="send">Send message</button>
-    <p class="fnote" id="fnote"><b>Demonstration form.</b> Nothing is sent from this preview. Your live website would have a working form.</p>
+    <p class="fnote" id="fnote"><b>Preview only.</b> Nothing is sent from this preview. When you activate your website, this form is connected to your verified email address.</p>
   </form>
 </div></section>
 
@@ -235,7 +238,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <div class="claim"><div class="wrap">
   <p><b><span class="long">This website is already built for </span><span class="short">Built for </span><span id="cname"></span>.</b><span class="sub">Free design. £150 for the first 12 months of hosting, maintenance and admin. No obligation.</span></p>
-  <a class="btn b-acc" id="claim" href="https://goldrivermarketing.co.uk/contact">Make this website mine</a>
+  <a class="btn b-acc" id="claim" href="https://goldrivermarketing.co.uk/contact">Activate My Website</a>
 </div></div>
 
 <script>
@@ -503,7 +506,11 @@ var info='';
 if(tel)info+='<a href="tel:'+esc(tel)+'">'+IC.phone+'<div><small>Call</small><strong>'+esc(ph)+'</strong></div></a>';
 if(addr)info+='<a href="'+esc(maps)+'" target="_blank" rel="noopener">'+IC.pin+'<div><small>Find us</small><strong>'+esc(addr)+'</strong></div></a>';
 $('info').innerHTML=info;
-$('send').onclick=function(){$('fnote').textContent='Demonstration only: this message was not sent. Choose "Make this website mine" and we will set up a working form for your live website.';$('fnote').style.color='var(--acc)'};
+$('send').onclick=function(){var ep=b.formEndpoint||'';if(!ep){$('fnote').textContent='Preview only: this message was not sent. Choose "Activate My Website" and we will connect this form to your verified email.';$('fnote').style.color='var(--acc)';return}
+if($('hp').value){return}var f=$('form'),i=f.querySelectorAll('input:not(#hp),textarea');var payload={lead:b.lead||'',name:i[0].value,phone:i[1].value,message:i[2].value};
+if(!payload.name||!payload.phone){$('fnote').textContent='Please add your name and phone number.';return}
+fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(function(r){if(!r.ok)throw 0;$('fnote').textContent='Thank you. Your message has been sent.';f.reset()}).catch(function(){$('fnote').textContent='Sorry, that did not send. Please call us instead.'})};
+if(b.formEndpoint){$('fbadge').style.display='none'}
 $('foot').textContent='© '+name+(city?' · '+city:'');
 
 
@@ -524,6 +531,7 @@ if(!(hero&&about&&galImgs.every(Boolean)&&bandImg))qa.push('missing image');
 if(!document.body.innerText.includes('£150'))qa.push('pricing missing');
 if(/undefined|\bnull\b|NaN|\{[nck]\}|__DATA/.test(document.body.innerText))qa.push('placeholder text');
 if(claimUrl.indexOf('lead=&')>-1)qa.push('claim link has no lead id');
+if(!/^tel:\+44\d{9,10}$/.test($('navcall').getAttribute('href')||''))qa.push('call link is not a valid tel: link');
 document.documentElement.setAttribute('data-qa',qa.length?'fail: '+qa.join('; '):'pass');
 document.documentElement.setAttribute('data-group',grp);document.documentElement.setAttribute('data-imgset',imgset);
 })();
