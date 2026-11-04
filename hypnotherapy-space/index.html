@@ -102,7 +102,7 @@ details p{margin:12px 0 0;color:var(--muted)}
 /* contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .info{display:grid;gap:14px;margin-top:28px}
-.info a,.info div{display:flex;gap:16px;align-items:center;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.info>a,.info>div{display:flex;gap:16px;align-items:center;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
 .info small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .info strong{font-size:18px}.info svg{color:var(--acc);width:1.5em;height:1.5em}
 form{background:var(--soft);border-radius:var(--r);padding:34px;display:grid;gap:16px}
@@ -119,7 +119,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .claim .btn{min-height:48px;white-space:nowrap}
 @media(max-width:900px){.nav nav{display:none}.about,.contact,.band{grid-template-columns:1fr}.grid3,.steps{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}
 .sec{padding:68px 0}.hero .wrap{padding-top:80px;padding-bottom:72px}.revbox{grid-template-columns:1fr;padding:28px;gap:14px}.about{gap:34px}.band .tx{padding:30px}
-.claim p .sub{display:none}.logo{font-size:16px}.nav .btn span{display:none}.nav .btn{padding:0 18px}body{padding-bottom:96px}}
+.claim p .sub{display:none}.claim p .long{display:none}.claim .btn{padding:0 18px;font-size:14.5px;min-height:46px}.claim p b{font-size:15px}.logo{font-size:16px}.nav .btn span{display:none}.nav .btn{padding:0 18px}body{padding-bottom:96px}}
+.short{display:none}@media(max-width:900px){.short{display:inline}}
+.claim p{min-width:0}
 </style>
 </head>
 <body>
@@ -209,7 +211,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer><div class="wrap"><span id="foot"></span><span>Complimentary preview created by GoldRiver Marketing. Images are illustrative.</span></div></footer>
 
 <div class="claim"><div class="wrap">
-  <p><b>This website is already built for <span id="cname"></span>.</b><span class="sub">Own it for £150 for the first 12 months of hosting. No website design fee.</span></p>
+  <p><b><span class="long">This website is already built for </span><span class="short">Built for </span><span id="cname"></span>.</b><span class="sub">Own it for £150 for the first 12 months of hosting. No website design fee.</span></p>
   <a class="btn b-acc" id="claim" href="https://goldrivermarketing.co.uk/contact">Make this website mine</a>
 </div></div>
 
@@ -258,6 +260,20 @@ hypno:{h:['Calm, focused hypnotherapy in {c}.','Change your habits. Find your ca
  st:[['Get in touch','Call or message to ask any questions.'],['Talk it through','We discuss your goals and how sessions work.'],['Begin your sessions','Start in a calm, supportive setting.']],
  fq:[['What happens in a first session?','A relaxed conversation about your goals, an explanation of how hypnotherapy works, and the next steps.'],['Will I be in control?','Yes. Sessions are relaxed and you remain aware throughout.'],['Where are you based?','See the contact section for the address and map.'],['How do I book?','Call or use the message form.']],
  ct:'Ready to take the first step?',cp:'Get in touch and ask any questions you like.'},
+scaffolding:{h:['Safe, reliable scaffolding in {c}.','Scaffolding you can trust, across {c}.'],s:'{n} provides scaffolding for homes and commercial projects in {c}, with clear quotes and dependable service.',
+ a:['{n} is a scaffolding contractor covering {c} and the surrounding area. Whether it is a small domestic job or a larger project, the priorities are the same: safe access, a clear quote and a team that turns up when promised.','Get in touch with a few details about the job and we will talk you through the options.'],
+ tk:['Clear, no-pressure quotes','Safety-first approach','Local to {c}'],
+ sv:[['Domestic scaffolding','Safe access for repairs, extensions, decorating and roof work on homes.'],['Commercial scaffolding','Scaffolding for shops, offices and larger building projects.'],['Roof & chimney access','Secure access for roofing and chimney work.'],['Temporary roofs','Keep the weather off while work is under way.'],['Short and long-term hire','Hire periods to suit the length of your project.'],['Advice & quotations','Practical advice on what your job needs.']],
+ st:[['Tell us about the job','Call or message with the address and what you need.'],['Get a clear quote','We explain the scaffold required and the cost upfront.'],['Erected and dismantled safely','Work completed to schedule, with a tidy finish.']],
+ fq:[['How do I get a quote?','Call or use the message form with the address and the work planned.'],['What areas do you cover?','{c} and surrounding areas. Ask if you are unsure.'],['How long can I hire scaffolding for?','Hire periods vary by project. Get in touch and we will advise.'],['How quickly can you start?','Call us and we will let you know our availability.']],
+ ct:'Need scaffolding for your project?',cp:'Call today for friendly advice and a clear quote.'},
+skiphire:{h:['Skip hire made simple in {c}.','Skips delivered when you need them in {c}.'],s:'{n} offers straightforward skip hire in {c} for homes, builders and businesses.',
+ a:['{n} provides skip hire across {c} and the surrounding area. Clearing a house, finishing a build or tidying a garden should not be complicated, so we keep booking, delivery and collection simple.','Tell us what you are clearing and we will help you choose the right size.'],
+ tk:['Simple booking by phone','Sizes for every job','Local to {c}'],
+ sv:[['Domestic skips','Clear-outs, renovations and garden waste for homes.'],['Builders skips','Reliable skips for building and construction sites.'],['Commercial skips','Waste removal for shops, offices and businesses.'],['Choosing the right size','Advice on which skip suits your job.'],['Delivery & collection','Delivered to your door and collected when you are done.'],['Clear quotes','Know the price before you book.']],
+ st:[['Tell us what you need','Call or message with the job and the address.'],['Choose your skip','We recommend a size and agree the price.'],['Delivered and collected','Fill it at your pace and we take it away.']],
+ fq:[['What size skip do I need?','Tell us about your job and we will recommend a size.'],['Do I need a permit?','If the skip needs to go on the road, a permit may be needed. Ask us for advice.'],['What areas do you cover?','{c} and nearby.'],['How do I book?','Call or use the message form.']],
+ ct:'Need a skip?',cp:'Call for a quick, clear quote.'},
 nutrition:{h:'Eating well made simple in {c}.',s:'{n} helps you build healthy habits that fit real life, with friendly, practical advice.',
  a:['{n} is a {k} service supporting people across {c}. The focus is on realistic changes you can stick to, not fad diets.','Every plan starts with a conversation about you: your goals, your routine and what you enjoy eating.'],
  tk:['Practical, realistic advice','No fad diets or pressure','Local to {c}'],
@@ -357,7 +373,7 @@ business:{h:'Welcome to {n}, proudly serving {c}.',s:'{n} is a local {k} making 
  fq:[['How do I get in touch?','Call or use the message form.'],['Where are you based?','See the contact section.'],['What areas do you cover?','{c} and nearby.'],['How much does it cost?','Get in touch and we will explain.']],
  ct:'Ready to get in touch?',cp:'We would love to hear from you.'}
 };
-var KW=[['hypno',/hypno|hipno/i],['wellness',/hypno|hipno|coach|counsel|psychother|therapist|psycholog|mindful|wellness|wellbeing|sa[gğ]l[ıi]k|sa[uú]de|yoga|pilates|personal train|fitness|life /i],['medical',/chiro|osteo|physio|dent|clinic|doctor|medic|podiat|optic|acupunct|health/i],['nutrition',/nutri|diet/i],['massage',/massage|spa\b/i],['beauty',/hair|beauty|barber|salon|nail|lash|brow|tattoo|makeup/i],['pets',/dog|pet |pet$|vet|groom|kennel|cat /i],['driving_school',/driving|driver/i],['automotive',/mechanic|auto |auto$|car repair|car inspection|garage|mot\b|tyre|vehicle/i],['locksmith',/lock/i],['moving',/mov|removal|man and van|storage/i],['gardens',/garden|lawn|tree|landscap|paving/i],['home_services',/clean|carpet|window|pressure|laundry|dry clean|pest/i],['trades',/roof|plumb|electric|builder|joiner|carpent|heating|gas|plaster|tiler|handy|construct|contractor|paint|decorat|maintenance/i],['education',/tutor|school|teach|lesson|academy|music|instructor|piano|guitar/i],['professional',/account|solicitor|lawyer|financ|mortgage|insur|consult|estate agent|architect/i]];
+var KW=[['skiphire',/skip hire|skip$|\bskips?\b/i],['scaffolding',/scaffold/i],['hypno',/hypno|hipno/i],['wellness',/hypno|hipno|coach|counsel|psychother|therapist|psycholog|mindful|wellness|wellbeing|sa[gğ]l[ıi]k|sa[uú]de|yoga|pilates|personal train|fitness|life /i],['medical',/chiro|osteo|physio|dent|clinic|doctor|medic|podiat|optic|acupunct|health/i],['nutrition',/nutri|diet/i],['massage',/massage|spa\b/i],['beauty',/hair|beauty|barber|salon|nail|lash|brow|tattoo|makeup/i],['pets',/dog|pet |pet$|vet|groom|kennel|cat /i],['driving_school',/driving|driver/i],['automotive',/mechanic|auto |auto$|car repair|car inspection|garage|mot\b|tyre|vehicle/i],['locksmith',/lock/i],['moving',/mov|removal|man and van|storage/i],['gardens',/garden|lawn|tree|landscap|paving/i],['home_services',/clean|carpet|window|pressure|laundry|dry clean|pest/i],['trades',/roof|plumb|electric|builder|joiner|carpent|heating|gas|plaster|tiler|handy|construct|contractor|paint|decorat|maintenance/i],['education',/tutor|school|teach|lesson|academy|music|instructor|piano|guitar/i],['professional',/account|solicitor|lawyer|financ|mortgage|insur|consult|estate agent|architect/i]];
 
 var name=(b.name||'').trim();
 if(!name){document.body.innerHTML='<p style="padding:40px;font-family:sans-serif">Preview unavailable.</p>';return;}
@@ -366,7 +382,7 @@ var grp=(b.group&&L[b.group])?b.group:null;
 if(!grp){for(var i=0;i<KW.length;i++){if(KW[i][1].test(cat)){grp=KW[i][0];break}}}
 if(!grp){document.body.innerHTML='<p style="padding:40px;font-family:sans-serif">Preview unavailable.</p>';return;}
 var T=L[grp];
-var GL={medical:'health practice',wellness:'wellbeing service',hypno:'hypnotherapy practice',nutrition:'nutrition service',massage:'massage & therapy',beauty:'beauty & grooming',pets:'pet care',trades:'trades & building',home_services:'home services',automotive:'car care',driving_school:'driving school',education:'tuition & lessons',gardens:'garden care',locksmith:'locksmith',moving:'removals',professional:'professional services',business:'local business'};
+var GL={medical:'health practice',wellness:'wellbeing service',hypno:'hypnotherapy practice',scaffolding:'scaffolding',skiphire:'skip hire',nutrition:'nutrition service',massage:'massage & therapy',beauty:'beauty & grooming',pets:'pet care',trades:'trades & building',home_services:'home services',automotive:'car care',driving_school:'driving school',education:'tuition & lessons',gardens:'garden care',locksmith:'locksmith',moving:'removals',professional:'professional services',business:'local business'};
 if(!cat||/[^\u0000-\u024F]|[\u011F\u0131\u015F\u00E7\u00F6\u00FC\u00E3\u00F5\u00E9\u00E1]/.test(cat))cat=GL[grp].replace(/^./,function(c){return c.toUpperCase()});
 var katLow=cat.toLowerCase();
 var f=function(s){return String(s).replace(/\{n\}/g,name).replace(/\{c\}/g,city).replace(/\{k\}/g,katLow)};
@@ -377,6 +393,8 @@ var LC=function(g,ns){return ns.map(function(n){var p=(g==='driving_school')?'uk
 var PH={
  medical:['1649751361457-01d3a696c7e6','1706353399656-210cca727a33','1768507423533-b87b62769758','1519823551278-64ac92734fb1','1758273241078-8eec353836be','1758691462126-2ee47c8bf9e7'].map(U),
  beauty:['1634449571010-02389ed0f9b0','1761839256791-6a93f89fb8b0','1580618672591-eb180b1a973f','1605497788044-5a32c7078486','1560869713-7d0a29430803','1616394584738-fc6e612e71b9','1761718210089-ba3bb5ccb54f','1788328155052-e02abe9ba983'].map(U),
+scaffolding:['1508450859948-4e04fabaa4ea','1758035318694-a36ba3106b76','1616320999187-3c004dad4f0b','1758798349125-5c297b18b8b2','1603239564387-c5b5ea6f635e','1713593930871-e21d7f9ef4a1','1673978484308-6f32e2c4a984','1635961134620-5da36ab4ad72','1636362006544-22445420703f','1636362556682-11231883c01c'].map(U),
+ skiphire:['1707062358488-41594b7d6290','1713730060332-2e478ce2e318','1711568288588-8837fb930a93','1728219609949-dbc14f715284','1642377698753-2b7b0cda6a23','1704756082548-af7c773aa0ef','1593623671692-cb072e856b33','1775157478648-a56d61010bb9'].map(U),
  trades:['1788330937134-f0eb99133077','1630683924997-fe27050a0416','1595844730289-b248c919d6f9','1635424709845-3a85ad5e1f5e','1643225523483-e2c434191bba','1676210134188-4c05dd172f89','1542013936693-884638332954','1772442198677-10c8e7b46a5f','1621905251189-08b45d6a269e','1660330589693-99889d60181e','1562259949-e8e7689d7828','1456086272160-b28b0645b729'].map(U),
  gardens:['1784293449032-200db587788c','1597201278257-3687be27d954','1783451439661-152793447cbf','1668120089662-42642838cfef','1734303023491-db8037a21f09','1734079692079-aae7e24a7035','1773244398609-a4085e26b7c6','1585320806297-9794b3e4eeae','1761839259494-71caddcdd6b3','1622383563227-04401ab4e5ea'].map(U),
  moving:['1730154838368-c37b1fdebcf6','1758523671285-9ff3f4e0ff38','1714647211902-bb711d643a17','1758523671071-4e3c43d055e6','1522444195799-478538b28823'].map(U).concat(LC('moving',[1,2,4,8])),
@@ -460,6 +478,13 @@ $('info').innerHTML=info;
 $('send').onclick=function(){$('fnote').textContent='This is a preview, so the message was not sent. Click "Make this website mine" to activate your live form.';$('fnote').style.color='var(--acc)'};
 $('foot').textContent='© '+name+(city?' · '+city:'');
 
+
+/* image fallback: if an external photo fails, drop to a clean gradient instead of a broken/blank block */
+(function(){var chk=function(el,u,prop){var i=new Image();i.onerror=function(){el.style.backgroundImage='linear-gradient(135deg,var(--dark),color-mix(in srgb,var(--acc) 55%,var(--dark)))'};i.src=u};
+chk(document.querySelector('.hero'),hero,'');
+['about-img','band-img'].forEach(function(id){var e=$(id);var m=e.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);if(m)chk(e,m[1])});
+[].forEach.call(document.querySelectorAll('#gal div'),function(e){var m=e.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);if(m)chk(e,m[1])});
+var st=document.createElement('style');st.textContent='';})();
 var slug=(location.pathname.split('/').filter(Boolean).pop()||'');
 $('claim').href='https://goldrivermarketing.co.uk/contact?preview='+encodeURIComponent(slug)+'&business='+encodeURIComponent(name);
 })();

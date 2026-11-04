@@ -102,7 +102,7 @@ details p{margin:12px 0 0;color:var(--muted)}
 /* contact */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .info{display:grid;gap:14px;margin-top:28px}
-.info a,.info div{display:flex;gap:16px;align-items:center;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.info>a,.info>div{display:flex;gap:16px;align-items:center;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
 .info small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .info strong{font-size:18px}.info svg{color:var(--acc);width:1.5em;height:1.5em}
 form{background:var(--soft);border-radius:var(--r);padding:34px;display:grid;gap:16px}
@@ -119,7 +119,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .claim .btn{min-height:48px;white-space:nowrap}
 @media(max-width:900px){.nav nav{display:none}.about,.contact,.band{grid-template-columns:1fr}.grid3,.steps{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}
 .sec{padding:68px 0}.hero .wrap{padding-top:80px;padding-bottom:72px}.revbox{grid-template-columns:1fr;padding:28px;gap:14px}.about{gap:34px}.band .tx{padding:30px}
-.claim p .sub{display:none}.logo{font-size:16px}.nav .btn span{display:none}.nav .btn{padding:0 18px}body{padding-bottom:96px}}
+.claim p .sub{display:none}.claim p .long{display:none}.claim .btn{padding:0 18px;font-size:14.5px;min-height:46px}.claim p b{font-size:15px}.logo{font-size:16px}.nav .btn span{display:none}.nav .btn{padding:0 18px}body{padding-bottom:96px}}
+.short{display:none}@media(max-width:900px){.short{display:inline}}
+.claim p{min-width:0}
 </style>
 </head>
 <body>
@@ -209,7 +211,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <footer><div class="wrap"><span id="foot"></span><span>Complimentary preview created by GoldRiver Marketing. Images are illustrative.</span></div></footer>
 
 <div class="claim"><div class="wrap">
-  <p><b>This website is already built for <span id="cname"></span>.</b><span class="sub">Own it for £150 for the first 12 months of hosting. No website design fee.</span></p>
+  <p><b><span class="long">This website is already built for </span><span class="short">Built for </span><span id="cname"></span>.</b><span class="sub">Own it for £150 for the first 12 months of hosting. No website design fee.</span></p>
   <a class="btn b-acc" id="claim" href="https://goldrivermarketing.co.uk/contact">Make this website mine</a>
 </div></div>
 
