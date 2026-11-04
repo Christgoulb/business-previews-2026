@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="calm">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Website preview | GoldRiver Marketing</title>
+<meta name="description" content="A complimentary website preview created by GoldRiver Marketing." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #f7f4ee; --paper: #fffdf8; --ink: #171717; --muted: #5a574f; --line: rgba(23,23,23,.10);
+  --gold: #b88a3b; --gold-dark: #8f6829; --charcoal: #121212; --soft: #ebe5d9;
+  --radius-xl: 34px; --radius-lg: 24px;
+  --shadow: 0 26px 80px rgba(20,20,20,.14); --shadow-soft: 0 16px 40px rgba(20,20,20,.08);
+  --max: 1180px;
+  --hero-img: none; --hero2-img: none; --about-img: none;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+html[data-theme="calm"]       { --bg:#f3f1ea; --paper:#fffdf9; --soft:#e4eadf; --gold:#5f8a73; --gold-dark:#3f6552; --charcoal:#14201b; }
+html[data-theme="luxury"]     { --bg:#f8f1ee; --paper:#fffaf7; --soft:#efe0d8; --gold:#b98a6a; --gold-dark:#8c5f43; --charcoal:#1a1416; }
+html[data-theme="modern"]     { --bg:#f1f5f6; --paper:#fcfeff; --soft:#dce9ec; --gold:#1f8a9a; --gold-dark:#14606c; --charcoal:#0f1a1f; }
+html[data-theme="trust"]      { --bg:#f3f4f7; --paper:#fdfdff; --soft:#e1e4ee; --gold:#c9a24b; --gold-dark:#8f6829; --charcoal:#0f1b2d; }
+html[data-theme="natural"]    { --bg:#f3f4ec; --paper:#fdfef8; --soft:#e2e8d4; --gold:#6f8f3d; --gold-dark:#4b6a24; --charcoal:#14210f; }
+html[data-theme="industrial"] { --bg:#f1efec; --paper:#fdfcfa; --soft:#e5e0d9; --gold:#e26a1b; --gold-dark:#b04e0e; --charcoal:#161616; }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3 { font-family: var(--serif); font-weight: 600; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: 13px; font-weight: 700; color: var(--gold-dark); }
+.section { padding: 92px 0; }
+.section-title { font-size: clamp(34px, 4.6vw, 64px); line-height: 1; letter-spacing: -.03em; margin: 12px 0 22px; }
+.section-copy { color: var(--muted); font-size: 18px; max-width: 690px; }
+
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 26px; border-radius:999px; font-weight:600; border:1px solid transparent; transition: transform .18s ease, box-shadow .18s ease; cursor:pointer; font-family: var(--sans); font-size: 16px; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--charcoal); color:#fff; box-shadow: var(--shadow-soft); }
+.btn-gold { background: var(--gold); color:#fff; box-shadow: 0 18px 42px rgba(0,0,0,.18); }
+.btn-outline { border-color: rgba(255,255,255,.5); color:#fff; background: rgba(255,255,255,.10); backdrop-filter: blur(14px); }
+.btn-light { background:#fff; color: var(--ink); border-color: var(--line); }
+
+/* Reveal */
+.reveal { min-height: 100vh; position: relative; display:grid; place-items:center; overflow:hidden; color:#fff; background: var(--charcoal); }
+.reveal::before { content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(0,0,0,.76), rgba(0,0,0,.30)), var(--hero-img) center/cover no-repeat; transform: scale(1.03); }
+.reveal::after { content:""; position:absolute; inset:0; background: radial-gradient(circle at 30% 35%, rgba(255,255,255,.12), transparent 28%), linear-gradient(to bottom, transparent, rgba(0,0,0,.5)); }
+.reveal-inner { position:relative; z-index:2; width:100%; padding:34px 24px; }
+.reveal-card { max-width: 980px; margin: 0 auto; }
+.preview-pill { display:inline-block; padding:10px 16px; border-radius:999px; background: rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); backdrop-filter: blur(18px); font-size:14px; color: rgba(255,255,255,.9); }
+.reveal h1 { font-size: clamp(40px, 6vw, 84px); line-height: .98; letter-spacing: -.04em; margin: 28px 0 22px; max-width: 950px; }
+.reveal p { font-size: clamp(18px, 2.2vw, 26px); max-width: 720px; color: rgba(255,255,255,.84); margin: 0 0 34px; }
+.reveal-note { display:inline-flex; align-items:center; gap:12px; color: rgba(255,255,255,.9); font-weight:600; }
+.reveal-note span { display:inline-grid; place-items:center; width:38px; height:38px; border:1px solid rgba(255,255,255,.35); border-radius:999px; }
+.scroll-hint { position:absolute; bottom:26px; left:50%; transform:translateX(-50%); color: rgba(255,255,255,.7); font-size:12px; letter-spacing:.12em; text-transform:uppercase; z-index:2; }
+
+/* Nav */
+.nav { position:sticky; top:0; z-index:50; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(24px); border-bottom:1px solid var(--line); }
+.nav-inner { height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:-.02em; min-width:0; }
+.brand span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.mark { flex:none; width:40px; height:40px; border-radius:12px; background: var(--charcoal); color:#fff; display:grid; place-items:center; font-size:13px; font-weight:700; }
+.nav-links { display:flex; gap:24px; color: var(--muted); font-size:14px; font-weight:500; }
+.nav-links a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { padding: 72px 0 34px; }
+.hero-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap:26px; align-items:stretch; }
+.hero-copy { background: var(--paper); border:1px solid var(--line); border-radius: var(--radius-xl); padding: clamp(28px,5vw,60px); box-shadow: var(--shadow-soft); min-height:600px; display:flex; flex-direction:column; justify-content:space-between; }
+.hero h2 { font-size: clamp(40px, 5.2vw, 76px); line-height: .96; letter-spacing: -.035em; margin: 20px 0 22px; }
+.hero .lead { font-size: 20px; color: var(--muted); max-width: 560px; margin: 0; }
+.hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top: 28px; }
+.hero-image { border-radius: var(--radius-xl); overflow:hidden; min-height:600px; position:relative; box-shadow: var(--shadow); background: var(--soft); }
+.hero-image::before { content:""; position:absolute; inset:0; background: var(--hero2-img) center/cover no-repeat; }
+.hero-image::after { content:""; position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,.5), transparent 50%); }
+.tag { position:absolute; top:18px; right:18px; z-index:2; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background: rgba(0,0,0,.45); color:#fff; padding:6px 10px; border-radius:999px; backdrop-filter: blur(8px); }
+.review-float { position:absolute; left:24px; right:24px; bottom:24px; z-index:2; background: rgba(255,255,255,.88); border:1px solid rgba(255,255,255,.6); backdrop-filter: blur(18px); border-radius:22px; padding:18px 22px; display:flex; align-items:center; gap:18px; }
+.review-float strong { font-family: var(--serif); font-size: 40px; line-height:1; letter-spacing:-.03em; }
+.review-float small { display:block; color: var(--muted); font-size:15px; }
+.stars { --p: 100%; font-size: 20px; letter-spacing: 2px; background: linear-gradient(90deg, #f0a800 var(--p), #d9d3c4 var(--p)); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; display:inline-block; }
+
+/* Services strip */
+.strip { padding: 0 0 18px; }
+.strip-inner { display:flex; align-items:center; gap:14px; background: var(--charcoal); color:#fff; border-radius: 999px; padding: 10px 10px 10px 26px; box-shadow: var(--shadow-soft); overflow:hidden; }
+.strip-label { flex:none; text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:700; color: color-mix(in srgb, var(--gold) 70%, #fff); }
+.strip-list { display:flex; gap:10px; overflow-x:auto; scrollbar-width:none; padding: 2px; }
+.strip-list::-webkit-scrollbar { display:none; }
+.strip-list a { flex:none; padding:10px 18px; border-radius:999px; background: rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.14); font-size:15px; font-weight:500; white-space:nowrap; transition: background .18s; }
+.strip-list a:hover { background: var(--gold); }
+
+/* Trust */
+.trust { padding: 18px 0 64px; }
+.trust-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap:14px; }
+.trust-item { background: rgba(255,255,255,.65); border:1px solid var(--line); padding:20px; border-radius:22px; color: var(--muted); font-size:16px; }
+.trust-item strong { display:block; color: var(--ink); font-size:16px; margin-bottom:4px; }
+
+/* Cards */
+.cards { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top:38px; }
+.card { background: var(--paper); border:1px solid var(--line); border-radius:28px; padding:28px; box-shadow: var(--shadow-soft); transition: transform .18s ease, box-shadow .18s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.icon { width:48px; height:48px; display:grid; place-items:center; border-radius:16px; background: var(--soft); color: var(--gold-dark); margin-bottom:22px; font-weight:700; font-family: var(--serif); font-size:18px; }
+.card h3 { margin:0 0 10px; font-size:22px; letter-spacing:-.02em; }
+.card p { color: var(--muted); margin:0; }
+.note { font-size:15px; color: var(--muted); margin-top: 26px; }
+
+.split { display:grid; grid-template-columns: .9fr 1.1fr; gap:34px; align-items:center; }
+.panel { background: var(--paper); border:1px solid var(--line); border-radius: var(--radius-xl); padding: clamp(28px,5vw,54px); box-shadow: var(--shadow-soft); }
+.photo-panel { position:relative; min-height:520px; border-radius: var(--radius-xl); overflow:hidden; background: var(--about-img) center/cover no-repeat, var(--soft); box-shadow: var(--shadow); }
+
+/* Reviews */
+.reviews-section { background: var(--charcoal); color:#fff; border-radius:42px; margin:0 24px; overflow:hidden; }
+.reviews-grid { display:grid; grid-template-columns: .8fr 1.2fr; gap:34px; align-items:center; }
+.reviews-section .section-copy { color: rgba(255,255,255,.72); }
+.reviews-section .eyebrow { color: color-mix(in srgb, var(--gold) 70%, #fff); }
+.score { font-family: var(--serif); font-size: clamp(76px, 10vw, 132px); line-height:.85; letter-spacing:-.05em; margin:20px 0; }
+.review-card { background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:28px; padding:30px; }
+.review-card h3 { margin:0; font-size:28px; letter-spacing:-.02em; }
+.review-card p { color: rgba(255,255,255,.78); margin:12px 0 0; }
+.review-stats { display:grid; grid-template-columns: repeat(2,1fr); gap:12px; margin-top:22px; }
+.review-stat { background: rgba(255,255,255,.07); border-radius:18px; padding:16px; }
+.review-stat strong { display:block; font-size:26px; font-family: var(--serif); }
+.review-stat span { font-size:15px; color: rgba(255,255,255,.65); }
+
+/* FAQ */
+.faq { display:grid; gap:12px; margin-top:34px; }
+details { background: var(--paper); border:1px solid var(--line); border-radius:22px; padding:22px 24px; box-shadow: 0 8px 24px rgba(20,20,20,.04); }
+summary { cursor:pointer; font-weight:600; font-size:18px; list-style:none; display:flex; justify-content:space-between; gap:16px; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:"+"; color: var(--gold-dark); font-size:24px; line-height:1; }
+details[open] summary::after { content:"\2212"; }
+details p { color: var(--muted); margin:14px 0 0; }
+
+/* Find us */
+.map-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:stretch; }
+.map-polish { position:relative; min-height:520px; border-radius: var(--radius-xl); overflow:hidden; box-shadow: var(--shadow); border:1px solid var(--line); background: linear-gradient(135deg, var(--soft), color-mix(in srgb, var(--soft) 60%, var(--gold))); }
+.map-polish::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(18,18,18,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(18,18,18,.07) 1px, transparent 1px); background-size:44px 44px; opacity:.65; }
+.map-polish::after { content:""; position:absolute; inset:0; background: radial-gradient(circle at 48% 42%, rgba(255,255,255,.55), transparent 24%); }
+.map-marker { position:absolute; left:50%; top:42%; transform: translate(-50%,-50%); z-index:2; width:76px; height:76px; border-radius:50% 50% 50% 0; rotate:-45deg; background: var(--charcoal); box-shadow: 0 24px 60px rgba(0,0,0,.28); }
+.map-marker::after { content:""; position:absolute; inset:24px; border-radius:50%; background: var(--gold); }
+.map-label { position:absolute; z-index:3; left:24px; bottom:24px; right:24px; background: rgba(255,253,248,.92); backdrop-filter: blur(18px); border:1px solid var(--line); border-radius:22px; padding:20px 22px; }
+.address-card { display:flex; flex-direction:column; justify-content:space-between; gap:24px; }
+.address { font-family: var(--serif); font-size: 28px; line-height:1.15; letter-spacing:-.02em; margin:22px 0; }
+
+/* Contact */
+.contact { background: var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:stretch; }
+.contact-line { display:flex; flex-direction:column; gap:2px; padding:16px 0; border-bottom:1px solid var(--line); }
+.contact-line:last-of-type { border-bottom:0; }
+.contact-line span { font-size:13px; letter-spacing:.12em; text-transform:uppercase; color: var(--muted); }
+.contact-line strong { font-size:19px; font-weight:600; }
+.panel-dark { background: var(--charcoal); color:#fff; border-color: transparent; }
+.panel-dark .section-copy { color: rgba(255,255,255,.75); }
+.panel-dark .eyebrow { color: color-mix(in srgb, var(--gold) 70%, #fff); }
+
+.final-cta { padding: 100px 0; text-align:center; }
+.final-cta h2 { font-size: clamp(38px, 6vw, 80px); line-height:.98; letter-spacing:-.035em; margin:0 auto 22px; max-width: 900px; }
+.final-cta p { color: var(--muted); font-size:20px; max-width:700px; margin:0 auto 32px; }
+
+footer { background: var(--charcoal); color:#fff; padding:52px 0; }
+.footer-grid { display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; align-items:flex-end; }
+footer p { color: rgba(255,255,255,.78); margin:8px 0 0; font-size:15px; max-width: 560px; }
+footer a { color:#fff; text-decoration: underline; text-underline-offset:4px; }
+.sticky-claim { position:fixed; right:18px; bottom:18px; z-index:80; transition: opacity .25s, transform .25s; }
+.sticky-claim.is-hidden { opacity:0; pointer-events:none; transform: translateY(12px); }
+
+body[data-reviews="no"] .needs-reviews { display:none !important; }
+
+@media (max-width: 900px) {
+  .nav-links { display:none; }
+  .hero-grid, .split, .reviews-grid, .map-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-copy { min-height:auto; gap:28px; }
+  .hero-image { min-height: 420px; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .reviews-section { border-radius:30px; margin:0 12px; }
+  .photo-panel { min-height: 380px; }
+}
+@media (max-width: 560px) {
+  .wrap { padding: 0 16px; }
+  .section { padding: 64px 0; }
+  .nav-inner { height:66px; }
+  .cards { grid-template-columns: 1fr; }
+  .strip-inner { border-radius: 26px; padding-left:18px; }
+  .strip-label { display:none; }
+  .review-float { left:14px; right:14px; bottom:14px; padding:14px 16px; }
+  .sticky-claim { left:16px; right:16px; }
+  .sticky-claim .btn { width:100%; }
+  .nav .btn { min-height:44px; padding:0 18px; font-size:14px; white-space:nowrap; }
+}
+</style>
+</head>
+<body data-reviews="yes">
+<noscript><p style="padding:24px;font-family:sans-serif">This website preview needs JavaScript enabled. Created by GoldRiver Marketing.</p></noscript>
+
+<section class="reveal" id="top">
+  <div class="reveal-inner">
+    <div class="reveal-card">
+      <div class="preview-pill">Complimentary website preview &bull; Created exclusively for <span data-t="b.name">&nbsp;</span></div>
+      <h1>I built this website for <span data-t="b.name">&nbsp;</span>.</h1>
+      <p>A website you can be proud to share, built to earn trust and bring in more local customers.</p>
+      <div class="reveal-note"><span>&darr;</span> Scroll to explore your website preview</div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll to explore</div>
+</section>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="mark" data-t="b.initials"></span><span data-t="b.name"></span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="needs-reviews" href="#reviews">Reviews</a>
+      <a href="#faq">Questions</a>
+      <a href="#find-us">Find us</a>
+    </div>
+    <a class="btn btn-primary" data-tel href="#contact">Call now</a>
+  </div>
+</nav>
+
+<main id="website">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div>
+          <div class="eyebrow"><span data-t="b.category"></span> in <span data-t="b.city"></span></div>
+          <h2 data-t="c.headline"></h2>
+          <p class="lead" data-t="c.sub"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-tel href="#contact">Call <span data-t="b.phone"></span></a>
+            <a class="btn btn-light" data-maps target="_blank" rel="noopener" href="#find-us">Get directions</a>
+          </div>
+        </div>
+        <div class="section-copy">A website that reflects the quality of the business and helps more local customers choose it.</div>
+      </div>
+      <div class="hero-image" role="img" aria-label="Illustrative image">
+        <span class="tag">Illustrative image</span>
+        <div class="review-float needs-reviews">
+          <strong data-t="b.rating"></strong>
+          <div><span class="stars" id="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small><span data-t="b.reviews"></span> Google reviews</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap strip">
+    <div class="strip-inner">
+      <span class="strip-label">Services</span>
+      <div class="strip-list" id="strip"></div>
+    </div>
+  </div>
+
+  <section class="trust">
+    <div class="wrap trust-grid">
+      <div class="trust-item"><strong>Local</strong>Serving customers in <span data-t="b.city"></span> and nearby areas.</div>
+      <div class="trust-item needs-reviews"><strong>Rated on Google</strong><span data-t="b.rating"></span> from <span data-t="b.reviews"></span> Google reviews.</div>
+      <div class="trust-item"><strong>Easy to contact</strong>Call and directions buttons on every page.</div>
+      <div class="trust-item"><strong>Made to be found</strong>Clear services, questions and location in one place.</div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="eyebrow">Services</div>
+      <h2 class="section-title">What <span data-t="b.name"></span> can help with.</h2>
+      <p class="section-copy">Clear service information helps people understand what is offered and get in touch with confidence.</p>
+      <div class="cards" id="cards"></div>
+      <p class="note">Service descriptions are indicative and would be confirmed with you before this website goes live.</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap split">
+      <div class="photo-panel" role="img" aria-label="Illustrative image"><span class="tag">Illustrative image</span></div>
+      <div class="panel">
+        <div class="eyebrow">About</div>
+        <h2 class="section-title">A stronger first impression.</h2>
+        <p class="section-copy" data-t="c.about"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews-section needs-reviews" id="reviews">
+    <div class="wrap reviews-grid">
+      <div>
+        <div class="eyebrow">Already trusted locally</div>
+        <div class="score" data-t="b.rating"></div>
+        <div class="stars" id="stars2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="section-copy"><span data-t="b.name"></span> has <span data-t="b.reviews"></span> Google reviews. This website puts that trust in front of customers at the moment they decide to call.</p>
+        <a class="btn btn-gold" data-reviews target="_blank" rel="noopener" href="#reviews">Read the Google reviews</a>
+      </div>
+      <div class="review-card">
+        <h3>Your reviews are one of your strongest assets.</h3>
+        <p>Customers feel more confident when trust signals are easy to see. The figures here come straight from the public Google Business Profile.</p>
+        <div class="review-stats">
+          <div class="review-stat"><strong data-t="b.rating"></strong><span>Google rating</span></div>
+          <div class="review-stat"><strong data-t="b.reviews"></strong><span>Google reviews</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="eyebrow">Common questions</div>
+      <h2 class="section-title">Useful answers before customers call.</h2>
+      <div class="faq" id="faq-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="find-us">
+    <div class="wrap map-grid">
+      <a class="map-polish" data-maps target="_blank" rel="noopener" href="#find-us" aria-label="Open the location on Google Maps">
+        <div class="map-marker"></div>
+        <div class="map-label">
+          <strong data-t="b.name"></strong><br>
+          <span id="addr-line"></span><br>
+          <span style="color:var(--gold-dark);font-weight:600;">Open the exact location on Google Maps &rarr;</span>
+        </div>
+      </a>
+      <div class="panel address-card">
+        <div>
+          <div class="eyebrow">Find us</div>
+          <h2 class="section-title">Visit <span data-t="b.name"></span>.</h2>
+          <div class="address" id="addr-block"></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" data-maps target="_blank" rel="noopener" href="#find-us">Get directions</a>
+          <a class="btn btn-light" data-tel href="#contact">Call now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="panel">
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-title">Get in touch.</h2>
+        <div class="contact-line"><span>Phone</span><strong><a data-tel href="#contact"><span data-t="b.phone"></span></a></strong></div>
+        <div class="contact-line"><span>Address</span><strong id="addr-contact"></strong></div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" data-tel href="#contact">Call <span data-t="b.phone"></span></a>
+          <a class="btn btn-light" data-maps target="_blank" rel="noopener" href="#find-us">Get directions</a>
+        </div>
+      </div>
+      <div class="panel panel-dark">
+        <div class="eyebrow">Like what you see?</div>
+        <h2 class="section-title">Make this website yours.</h2>
+        <p class="section-copy">This preview can be personalised with your own photography, colours, services, questions and Google Business Profile details.</p>
+        <div class="hero-actions"><a class="btn btn-gold" href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">Make this website mine</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="wrap">
+      <h2>Be found, be trusted, be contacted directly.</h2>
+      <p>One clear place to see the services, find the location and get in touch, without depending on third-party platforms.</p>
+      <a class="btn btn-primary" href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">Make this website mine</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <strong>Created by GoldRiver Marketing</strong>
+      <p>Complimentary website preview for demonstration purposes. Photography shown is illustrative stock imagery, not images of the business's own work.</p>
+    </div>
+    <a href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">goldrivermarketing.co.uk</a>
+  </div>
+</footer>
+
+<div class="sticky-claim"><a class="btn btn-gold" href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">Make this website mine</a></div>
+
+<script>
+(function () {
+  var D = __DATA_JSON__;
+  var b = D.b || {}, c = D.c || {};
+  var root = document.documentElement;
+  function get(path) { var p = path.split("."), o = D; for (var i = 0; i < p.length; i++) { if (o == null) return ""; o = o[p[i]]; } return o == null ? "" : String(o); }
+  function safeUrl(u) { return /^https?:\/\/[^\s"'()<>]+$/.test(u || "") ? u : ""; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  root.setAttribute("data-theme", b.theme || "calm");
+  document.title = (b.name || "Website") + " | Website preview by GoldRiver Marketing";
+  var md = document.querySelector('meta[name="description"]');
+  if (md) md.setAttribute("content", "A complimentary website preview created for " + (b.name || "your business") + " by GoldRiver Marketing.");
+
+  [["--hero-img", b.hero], ["--hero2-img", b.hero2], ["--about-img", b.about]].forEach(function (x) {
+    var u = safeUrl(x[1]); if (u) root.style.setProperty(x[0], 'url("' + u + '")');
+  });
+
+  document.querySelectorAll("[data-t]").forEach(function (e) { e.textContent = get(e.getAttribute("data-t")); });
+
+  var tel = String(b.phoneTel || "").replace(/[^+0-9]/g, "");
+  document.querySelectorAll("[data-tel]").forEach(function (a) { if (tel) a.setAttribute("href", "tel:" + tel); else a.style.display = "none"; });
+
+  var maps = safeUrl(b.mapsLink) || ("https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent([b.name, b.address, b.postcode].filter(Boolean).join(" ")));
+  document.querySelectorAll("[data-maps]").forEach(function (a) { a.setAttribute("href", maps); });
+  var rev = safeUrl(b.reviewsLink) || maps;
+  document.querySelectorAll("[data-reviews]").forEach(function (a) { a.setAttribute("href", rev); });
+
+  var rating = parseFloat(b.rating), hasReviews = !isNaN(rating) && rating > 0 && parseInt(b.reviews, 10) > 0;
+  document.body.setAttribute("data-reviews", hasReviews ? "yes" : "no");
+  if (hasReviews) ["stars", "stars2"].forEach(function (id) { var s = document.getElementById(id); if (s) s.style.setProperty("--p", Math.min(100, rating / 5 * 100) + "%"); });
+
+  var mark = document.querySelector(".mark"); if (mark && !mark.textContent) mark.textContent = (b.name || "").slice(0, 2).toUpperCase();
+
+  var line = [b.address, b.city, b.postcode].filter(Boolean).join(", ");
+  document.getElementById("addr-line").textContent = line;
+  document.getElementById("addr-contact").textContent = line;
+  var blk = document.getElementById("addr-block"); [b.address, b.city, b.postcode].filter(Boolean).forEach(function (t, i) { if (i) blk.appendChild(document.createElement("br")); blk.appendChild(document.createTextNode(t)); });
+
+  var services = (c.services || []).filter(function (s) { return s && s.t; });
+  var strip = document.getElementById("strip"), cards = document.getElementById("cards");
+  services.forEach(function (s, i) {
+    var a = el("a", null, s.t); a.href = "#services"; strip.appendChild(a);
+    var card = el("article", "card"); card.appendChild(el("div", "icon", String(i + 1).padStart(2, "0"))); card.appendChild(el("h3", null, s.t)); card.appendChild(el("p", null, s.d || "")); cards.appendChild(card);
+  });
+  if (!services.length) { var st = document.querySelector(".strip"); if (st) st.style.display = "none"; }
+
+  var faq = document.getElementById("faq-list");
+  (c.faq || []).filter(function (f) { return f && f.q && f.a; }).forEach(function (f, i) {
+    var d = el("details"); if (i === 0) d.open = true; d.appendChild(el("summary", null, f.q)); d.appendChild(el("p", null, f.a)); faq.appendChild(d);
+  });
+
+  var claim = document.querySelector(".sticky-claim"), seen = 0;
+  if (claim && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { seen += en.isIntersecting ? 1 : -1; if (seen < 0) seen = 0; });
+      claim.classList.toggle("is-hidden", seen > 0);
+    }, { threshold: 0.35 });
+    document.querySelectorAll(".panel-dark, .final-cta").forEach(function (t) { io.observe(t); });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener("click", function (e) { var t = document.querySelector(this.getAttribute("href")); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth" }); } });
+  });
+})();
+</script>
+</body>
+</html>
