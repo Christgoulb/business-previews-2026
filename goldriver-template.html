@@ -379,7 +379,7 @@ body[data-reviews="no"] .needs-reviews { display:none !important; }
 
 <script>
 (function () {
-  var D = {{DATA_JSON}};
+  var D = __DATA_JSON__;
   var b = D.b || {}, c = D.c || {};
   var root = document.documentElement;
   function get(path) { var p = path.split("."), o = D; for (var i = 0; i < p.length; i++) { if (o == null) return ""; o = o[p[i]]; } return o == null ? "" : String(o); }
