@@ -122,6 +122,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .claim p .sub{display:none}.claim p .long{display:none}.claim .btn{padding:0 18px;font-size:14.5px;min-height:46px}.claim p b{font-size:15px}.logo{font-size:16px}.nav .btn span{display:none}.nav .btn{padding:0 18px}body{padding-bottom:96px}}
 .short{display:none}@media(max-width:900px){.short{display:inline}}
 .claim p{min-width:0}
+.yours{background:var(--soft)}.yours-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.terms{list-style:none;margin:0;padding:0;display:grid;gap:14px}.terms li{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px 24px;display:grid;gap:4px}
+.terms b{font-family:var(--serif);font-size:21px}.terms span{color:var(--muted);font-size:15.5px}
+@media(max-width:900px){.yours-grid{grid-template-columns:1fr;gap:30px}}
+.big.stars-only{font-size:56px}
 </style>
 </head>
 <body>
@@ -150,6 +155,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div id="a-p"></div>
     <ul class="ticks" id="ticks"></ul>
     <div class="cta-row" id="a-cta"></div>
+  </div>
+</div></section>
+
+
+<section class="sec yours" id="yours"><div class="wrap">
+  <div class="yours-grid">
+    <div>
+      <div class="eyebrow">Made for <span id="y-name"></span></div>
+      <h2>Your website. Your way.</h2>
+      <p class="lead">We've created this complimentary website preview exclusively for your business. The design, colours, photographs, logo, wording and services can all be tailored to your preferences before your website goes live.</p>
+      <div class="cta-row" style="margin-top:26px"><a class="btn b-acc" id="y-claim" href="#">Make this website mine</a></div>
+    </div>
+    <ul class="terms">
+      <li><b>The website design is free.</b><span>No design fee, and no obligation to claim this preview.</span></li>
+      <li><b>Request changes before going live.</b><span>Tell us what you would like changed and we will update it.</span></li>
+      <li><b>£150 for the first 12 months.</b><span>Covers hosting, maintenance and administration.</span></li>
+      <li><b>You are in control.</b><span>If it is not for you, simply do nothing.</span></li>
+    </ul>
   </div>
 </div></section>
 
@@ -204,19 +227,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <label>Phone<input placeholder="Best number to reach you"></label>
     <label>How can we help?<textarea placeholder="Tell us a little about what you need"></textarea></label>
     <button class="btn b-acc" type="button" id="send">Send message</button>
-    <p class="fnote" id="fnote">Preview form. On your live website, messages go straight to you.</p>
+    <p class="fnote" id="fnote"><b>Demonstration form.</b> Nothing is sent from this preview. Your live website would have a working form.</p>
   </form>
 </div></section>
 
 <footer><div class="wrap"><span id="foot"></span><span>Complimentary preview created by GoldRiver Marketing. Images are illustrative.</span></div></footer>
 
 <div class="claim"><div class="wrap">
-  <p><b><span class="long">This website is already built for </span><span class="short">Built for </span><span id="cname"></span>.</b><span class="sub">Own it for £150 for the first 12 months of hosting. No website design fee.</span></p>
+  <p><b><span class="long">This website is already built for </span><span class="short">Built for </span><span id="cname"></span>.</b><span class="sub">Free design. £150 for the first 12 months of hosting, maintenance and admin. No obligation.</span></p>
   <a class="btn b-acc" id="claim" href="https://goldrivermarketing.co.uk/contact">Make this website mine</a>
 </div></div>
 
 <script>
-var D = {"b": {"name": "Toy's Life Coaching", "initials": "TL", "category": "Life coach", "city": "London", "address": "64A Uverdale Rd", "postcode": "SW10 0SS", "phone": "+44 7444 568251", "phoneTel": "+447444568251", "rating": "5.0", "reviews": "1", "theme": "calm"}};
+var D = {"b": {"name": "Toy's Life Coaching", "initials": "TL", "category": "Life coach", "city": "London", "address": "64A Uverdale Rd", "postcode": "SW10 0SS", "phone": "+44 7444 568251", "phoneTel": "+447444568251", "rating": "5.0", "reviews": "1", "theme": "calm", "lead": "DEMO"}};
 </script>
 <script>
 (function(){
@@ -251,7 +274,7 @@ wellness:{h:['Feel better, live better in {c}.','Real support, tailored to you i
  tk:['Personal, one-to-one attention','A welcoming, judgement-free space','Local to {c}'],
  sv:[['Free introductory chat','A relaxed first conversation to see how we can help.'],['One-to-one sessions','Time and attention focused entirely on you.'],['Personal plans','A realistic plan built around your goals and routine.'],['Goal setting','Clear, achievable steps so you know where you are heading.'],['Progress reviews','Regular check-ins to celebrate wins and adjust the plan.'],['Ongoing support','Encouragement and accountability as you go.']],
  st:[['Say hello','Call or message to arrange a first chat.'],['Plan together','We talk through your goals and agree an approach.'],['Make progress','Start your sessions and build momentum with support.']],
- fq:[['Is the first conversation free to ask about?','Get in touch and we will explain how first sessions work.'],['Do I need any experience?','Not at all. Everything is tailored to where you are right now.'],['Where do sessions take place?','See the contact section for the address and directions.'],['How do I book?','Call or use the message form and we will arrange a time.']],
+ fq:[['How does a first session work?','Get in touch and we will explain what to expect and how to book.'],['Do I need any experience?','Not at all. Everything is tailored to where you are right now.'],['Where do sessions take place?','See the contact section for the address and directions.'],['How do I book?','Call or use the message form and we will arrange a time.']],
  ct:'Ready to make a start?',cp:'Drop us a message or give us a call. We would love to hear from you.'},
 hypno:{h:['Calm, focused hypnotherapy in {c}.','Change your habits. Find your calm in {c}.'],s:'{n} offers relaxed, one-to-one hypnotherapy sessions in {c}, with friendly support at every step.',
  a:['{n} is a hypnotherapy practice serving clients in and around {c}. Sessions are relaxed, private and paced to suit you, so you always feel comfortable and in control.','A first conversation is the best way to find out whether hypnotherapy is right for you and what to expect.'],
@@ -418,6 +441,7 @@ document.documentElement.setAttribute('data-theme',b.theme||'calm');
 document.documentElement.style.setProperty('--hero','url("'+hero+'")');
 document.title=name+' | Website preview';
 
+var showRating=(+b.rating>=4.0&&+b.reviews>=1);
 var tel=b.phoneTel||'', ph=b.phone||'';
 if(ph&&!/^(\+44|0044|0)/.test(ph.replace(/[\s()-]/g,''))){tel='';ph='';}
 if(ph&&!tel)tel=ph.replace(/[\s()-]/g,'').replace(/^0044/,'+44').replace(/^0/,'+44');
@@ -433,7 +457,7 @@ var h=f(Array.isArray(T.h)?T.h[hs%T.h.length]:T.h); $('h1').textContent=h;
 $('h-sub').textContent=f(T.s);
 $('h-cta').innerHTML=callBtn('b-acc')+dirBtn('b-line');
 var proof='';
-if(b.rating&&+b.rating>0){proof+='<span><span class="stars">★★★★★</span> '+esc(b.rating)+' on Google'+(b.reviews?' · '+esc(b.reviews)+' reviews':'')+'</span>';}
+if(showRating){proof+='<span><span class="stars">★★★★★</span> '+esc(b.rating)+' on Google'+(b.reviews?' · '+esc(b.reviews)+' reviews':'')+'</span>';}
 proof+='<span>'+IC.pin+' '+esc(city)+(b.postcode?', '+esc(b.postcode.split(' ')[0]):'')+'</span><span>'+IC.clock+' Get in touch to arrange a time</span>';
 $('proof').innerHTML=proof;
 
@@ -457,12 +481,12 @@ var g='';galImgs.forEach(function(u){g+='<div style="background-image:url(\''+u+
 $('band-img').style.backgroundImage='url("'+bandImg+'")';
 $('b-h').textContent=f(T.ct); $('b-p').textContent=f(T.cp); $('b-cta').innerHTML=callBtn('b-acc');
 
-if(b.rating&&+b.rating>0){
+if(showRating){
   $('r-h').textContent='Rated '+b.rating+' on Google.';
   $('revbox').innerHTML='<div><div class="big">'+esc(b.rating)+'</div><span class="stars">★★★★★</span></div><div><h3 style="font-size:26px;margin-bottom:8px">'+(b.reviews?esc(b.reviews)+' Google reviews':'Google reviews')+'</h3><p style="color:var(--muted);margin:0 0 20px">Real feedback from real customers of '+esc(name)+'. See what people say on Google.</p><a class="btn b-dark" href="'+esc(b.reviewsLink||maps)+'" target="_blank" rel="noopener">Read the reviews on Google</a></div>';
 }else{
   $('r-h').textContent='Your reviews, front and centre.';
-  $('revbox').innerHTML='<div><div class="big" style="font-size:64px">★★★★★</div></div><div><h3 style="font-size:26px;margin-bottom:8px">Show off your best reviews here</h3><p style="color:var(--muted);margin:0">Once this website is yours, your Google reviews can be displayed on this page to build trust with new customers.</p></div>';
+  $('revbox').innerHTML='<div><div class="big stars-only">★★★★★</div></div><div><h3 style="font-size:26px;margin-bottom:8px">Show off your best reviews here</h3><p style="color:var(--muted);margin:0">Once this website is yours, your Google reviews can be displayed on this page to build trust with new customers.</p></div>';
 }
 $('faqs').innerHTML=T.fq.map(function(q){return '<details><summary>'+esc(q[0])+'</summary><p>'+esc(f(q[1]))+'</p></details>'}).join('');
 $('c-h').textContent=f(T.ct); $('c-p').textContent=f(T.cp);
@@ -475,7 +499,7 @@ var info='';
 if(tel)info+='<a href="tel:'+esc(tel)+'">'+IC.phone+'<div><small>Call</small><strong>'+esc(ph)+'</strong></div></a>';
 if(addr)info+='<a href="'+esc(maps)+'" target="_blank" rel="noopener">'+IC.pin+'<div><small>Find us</small><strong>'+esc(addr)+'</strong></div></a>';
 $('info').innerHTML=info;
-$('send').onclick=function(){$('fnote').textContent='This is a preview, so the message was not sent. Click "Make this website mine" to activate your live form.';$('fnote').style.color='var(--acc)'};
+$('send').onclick=function(){$('fnote').textContent='Demonstration only: this message was not sent. Choose "Make this website mine" and we will set up a working form for your live website.';$('fnote').style.color='var(--acc)'};
 $('foot').textContent='© '+name+(city?' · '+city:'');
 
 
@@ -486,7 +510,18 @@ chk(document.querySelector('.hero'),hero,'');
 [].forEach.call(document.querySelectorAll('#gal div'),function(e){var m=e.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);if(m)chk(e,m[1])});
 var st=document.createElement('style');st.textContent='';})();
 var slug=(location.pathname.split('/').filter(Boolean).pop()||'');
-$('claim').href='https://goldrivermarketing.co.uk/contact?preview='+encodeURIComponent(slug)+'&business='+encodeURIComponent(name);
+var claimUrl='https://goldrivermarketing.co.uk/contact?lead='+encodeURIComponent(b.lead||'')+'&business='+encodeURIComponent(name)+'&preview='+encodeURIComponent(location.origin+location.pathname);
+$('claim').href=claimUrl;$('y-claim').href=claimUrl;$('y-name').textContent=name;
+/* self-check: exposes pass/fail so the publisher and QA scripts can fail a record instead of shipping a defective page */
+var qa=[];
+if(!name)qa.push('missing name');
+if(!b.lead)qa.push('missing lead id');
+if(!(hero&&about&&galImgs.every(Boolean)&&bandImg))qa.push('missing image');
+if(!document.body.innerText.includes('£150'))qa.push('pricing missing');
+if(/undefined|\bnull\b|NaN|\{[nck]\}|__DATA/.test(document.body.innerText))qa.push('placeholder text');
+if(claimUrl.indexOf('lead=&')>-1)qa.push('claim link has no lead id');
+document.documentElement.setAttribute('data-qa',qa.length?'fail: '+qa.join('; '):'pass');
+document.documentElement.setAttribute('data-group',grp);
 })();
 </script>
 </body>
