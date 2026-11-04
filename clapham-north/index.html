@@ -5,441 +5,463 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
 <title>Website preview | GoldRiver Marketing</title>
-<meta name="description" content="A complimentary website preview created by GoldRiver Marketing." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-:root {
-  --bg: #f7f4ee; --paper: #fffdf8; --ink: #171717; --muted: #5a574f; --line: rgba(23,23,23,.10);
-  --gold: #b88a3b; --gold-dark: #8f6829; --charcoal: #121212; --soft: #ebe5d9;
-  --radius-xl: 34px; --radius-lg: 24px;
-  --shadow: 0 26px 80px rgba(20,20,20,.14); --shadow-soft: 0 16px 40px rgba(20,20,20,.08);
-  --max: 1180px;
-  --hero-img: none; --hero2-img: none; --about-img: none;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-html[data-theme="calm"]       { --bg:#f3f1ea; --paper:#fffdf9; --soft:#e4eadf; --gold:#5f8a73; --gold-dark:#3f6552; --charcoal:#14201b; }
-html[data-theme="luxury"]     { --bg:#f8f1ee; --paper:#fffaf7; --soft:#efe0d8; --gold:#b98a6a; --gold-dark:#8c5f43; --charcoal:#1a1416; }
-html[data-theme="modern"]     { --bg:#f1f5f6; --paper:#fcfeff; --soft:#dce9ec; --gold:#1f8a9a; --gold-dark:#14606c; --charcoal:#0f1a1f; }
-html[data-theme="trust"]      { --bg:#f3f4f7; --paper:#fdfdff; --soft:#e1e4ee; --gold:#c9a24b; --gold-dark:#8f6829; --charcoal:#0f1b2d; }
-html[data-theme="natural"]    { --bg:#f3f4ec; --paper:#fdfef8; --soft:#e2e8d4; --gold:#6f8f3d; --gold-dark:#4b6a24; --charcoal:#14210f; }
-html[data-theme="industrial"] { --bg:#f1efec; --paper:#fdfcfa; --soft:#e5e0d9; --gold:#e26a1b; --gold-dark:#b04e0e; --charcoal:#161616; }
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin:0; font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-a { color: inherit; text-decoration: none; }
-h1,h2,h3 { font-family: var(--serif); font-weight: 600; }
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: 13px; font-weight: 700; color: var(--gold-dark); }
-.section { padding: 92px 0; }
-.section-title { font-size: clamp(34px, 4.6vw, 64px); line-height: 1; letter-spacing: -.03em; margin: 12px 0 22px; }
-.section-copy { color: var(--muted); font-size: 18px; max-width: 690px; }
-
-.btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 26px; border-radius:999px; font-weight:600; border:1px solid transparent; transition: transform .18s ease, box-shadow .18s ease; cursor:pointer; font-family: var(--sans); font-size: 16px; }
-.btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--charcoal); color:#fff; box-shadow: var(--shadow-soft); }
-.btn-gold { background: var(--gold); color:#fff; box-shadow: 0 18px 42px rgba(0,0,0,.18); }
-.btn-outline { border-color: rgba(255,255,255,.5); color:#fff; background: rgba(255,255,255,.10); backdrop-filter: blur(14px); }
-.btn-light { background:#fff; color: var(--ink); border-color: var(--line); }
-
-/* Reveal */
-.reveal { min-height: 100vh; position: relative; display:grid; place-items:center; overflow:hidden; color:#fff; background: var(--charcoal); }
-.reveal::before { content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(0,0,0,.76), rgba(0,0,0,.30)), var(--hero-img) center/cover no-repeat; transform: scale(1.03); }
-.reveal::after { content:""; position:absolute; inset:0; background: radial-gradient(circle at 30% 35%, rgba(255,255,255,.12), transparent 28%), linear-gradient(to bottom, transparent, rgba(0,0,0,.5)); }
-.reveal-inner { position:relative; z-index:2; width:100%; padding:34px 24px; }
-.reveal-card { max-width: 980px; margin: 0 auto; }
-.preview-pill { display:inline-block; padding:10px 16px; border-radius:999px; background: rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); backdrop-filter: blur(18px); font-size:14px; color: rgba(255,255,255,.9); }
-.reveal h1 { font-size: clamp(40px, 6vw, 84px); line-height: .98; letter-spacing: -.04em; margin: 28px 0 22px; max-width: 950px; }
-.reveal p { font-size: clamp(18px, 2.2vw, 26px); max-width: 720px; color: rgba(255,255,255,.84); margin: 0 0 34px; }
-.reveal-note { display:inline-flex; align-items:center; gap:12px; color: rgba(255,255,255,.9); font-weight:600; }
-.reveal-note span { display:inline-grid; place-items:center; width:38px; height:38px; border:1px solid rgba(255,255,255,.35); border-radius:999px; }
-.scroll-hint { position:absolute; bottom:26px; left:50%; transform:translateX(-50%); color: rgba(255,255,255,.7); font-size:12px; letter-spacing:.12em; text-transform:uppercase; z-index:2; }
-
-/* Nav */
-.nav { position:sticky; top:0; z-index:50; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(24px); border-bottom:1px solid var(--line); }
-.nav-inner { height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-.brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:-.02em; min-width:0; }
-.brand span:last-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.mark { flex:none; width:40px; height:40px; border-radius:12px; background: var(--charcoal); color:#fff; display:grid; place-items:center; font-size:13px; font-weight:700; }
-.nav-links { display:flex; gap:24px; color: var(--muted); font-size:14px; font-weight:500; }
-.nav-links a:hover { color: var(--ink); }
-
-/* Hero */
-.hero { padding: 72px 0 34px; }
-.hero-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap:26px; align-items:stretch; }
-.hero-copy { background: var(--paper); border:1px solid var(--line); border-radius: var(--radius-xl); padding: clamp(28px,5vw,60px); box-shadow: var(--shadow-soft); min-height:600px; display:flex; flex-direction:column; justify-content:space-between; }
-.hero h2 { font-size: clamp(40px, 5.2vw, 76px); line-height: .96; letter-spacing: -.035em; margin: 20px 0 22px; }
-.hero .lead { font-size: 20px; color: var(--muted); max-width: 560px; margin: 0; }
-.hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top: 28px; }
-.hero-image { border-radius: var(--radius-xl); overflow:hidden; min-height:600px; position:relative; box-shadow: var(--shadow); background: var(--soft); }
-.hero-image::before { content:""; position:absolute; inset:0; background: var(--hero2-img) center/cover no-repeat; }
-.hero-image::after { content:""; position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,.5), transparent 50%); }
-.tag { position:absolute; top:18px; right:18px; z-index:2; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background: rgba(0,0,0,.45); color:#fff; padding:6px 10px; border-radius:999px; backdrop-filter: blur(8px); }
-.review-float { position:absolute; left:24px; right:24px; bottom:24px; z-index:2; background: rgba(255,255,255,.88); border:1px solid rgba(255,255,255,.6); backdrop-filter: blur(18px); border-radius:22px; padding:18px 22px; display:flex; align-items:center; gap:18px; }
-.review-float strong { font-family: var(--serif); font-size: 40px; line-height:1; letter-spacing:-.03em; }
-.review-float small { display:block; color: var(--muted); font-size:15px; }
-.stars { --p: 100%; font-size: 20px; letter-spacing: 2px; background: linear-gradient(90deg, #f0a800 var(--p), #d9d3c4 var(--p)); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; display:inline-block; }
-
-/* Services strip */
-.strip { padding: 0 0 18px; }
-.strip-inner { display:flex; align-items:center; gap:14px; background: var(--charcoal); color:#fff; border-radius: 999px; padding: 10px 10px 10px 26px; box-shadow: var(--shadow-soft); overflow:hidden; }
-.strip-label { flex:none; text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:700; color: color-mix(in srgb, var(--gold) 70%, #fff); }
-.strip-list { display:flex; gap:10px; overflow-x:auto; scrollbar-width:none; padding: 2px; }
-.strip-list::-webkit-scrollbar { display:none; }
-.strip-list a { flex:none; padding:10px 18px; border-radius:999px; background: rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.14); font-size:15px; font-weight:500; white-space:nowrap; transition: background .18s; }
-.strip-list a:hover { background: var(--gold); }
-
-/* Trust */
-.trust { padding: 18px 0 64px; }
-.trust-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap:14px; }
-.trust-item { background: rgba(255,255,255,.65); border:1px solid var(--line); padding:20px; border-radius:22px; color: var(--muted); font-size:16px; }
-.trust-item strong { display:block; color: var(--ink); font-size:16px; margin-bottom:4px; }
-
-/* Cards */
-.cards { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top:38px; }
-.card { background: var(--paper); border:1px solid var(--line); border-radius:28px; padding:28px; box-shadow: var(--shadow-soft); transition: transform .18s ease, box-shadow .18s ease; }
-.card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-.icon { width:48px; height:48px; display:grid; place-items:center; border-radius:16px; background: var(--soft); color: var(--gold-dark); margin-bottom:22px; font-weight:700; font-family: var(--serif); font-size:18px; }
-.card h3 { margin:0 0 10px; font-size:22px; letter-spacing:-.02em; }
-.card p { color: var(--muted); margin:0; }
-.note { font-size:15px; color: var(--muted); margin-top: 26px; }
-
-.split { display:grid; grid-template-columns: .9fr 1.1fr; gap:34px; align-items:center; }
-.panel { background: var(--paper); border:1px solid var(--line); border-radius: var(--radius-xl); padding: clamp(28px,5vw,54px); box-shadow: var(--shadow-soft); }
-.photo-panel { position:relative; min-height:520px; border-radius: var(--radius-xl); overflow:hidden; background: var(--about-img) center/cover no-repeat, var(--soft); box-shadow: var(--shadow); }
-
-/* Reviews */
-.reviews-section { background: var(--charcoal); color:#fff; border-radius:42px; margin:0 24px; overflow:hidden; }
-.reviews-grid { display:grid; grid-template-columns: .8fr 1.2fr; gap:34px; align-items:center; }
-.reviews-section .section-copy { color: rgba(255,255,255,.72); }
-.reviews-section .eyebrow { color: color-mix(in srgb, var(--gold) 70%, #fff); }
-.score { font-family: var(--serif); font-size: clamp(76px, 10vw, 132px); line-height:.85; letter-spacing:-.05em; margin:20px 0; }
-.review-card { background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:28px; padding:30px; }
-.review-card h3 { margin:0; font-size:28px; letter-spacing:-.02em; }
-.review-card p { color: rgba(255,255,255,.78); margin:12px 0 0; }
-.review-stats { display:grid; grid-template-columns: repeat(2,1fr); gap:12px; margin-top:22px; }
-.review-stat { background: rgba(255,255,255,.07); border-radius:18px; padding:16px; }
-.review-stat strong { display:block; font-size:26px; font-family: var(--serif); }
-.review-stat span { font-size:15px; color: rgba(255,255,255,.65); }
-
-/* FAQ */
-.faq { display:grid; gap:12px; margin-top:34px; }
-details { background: var(--paper); border:1px solid var(--line); border-radius:22px; padding:22px 24px; box-shadow: 0 8px 24px rgba(20,20,20,.04); }
-summary { cursor:pointer; font-weight:600; font-size:18px; list-style:none; display:flex; justify-content:space-between; gap:16px; }
-summary::-webkit-details-marker { display:none; }
-summary::after { content:"+"; color: var(--gold-dark); font-size:24px; line-height:1; }
-details[open] summary::after { content:"\2212"; }
-details p { color: var(--muted); margin:14px 0 0; }
-
-/* Find us */
-.map-grid { display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:stretch; }
-.map-polish { position:relative; min-height:520px; border-radius: var(--radius-xl); overflow:hidden; box-shadow: var(--shadow); border:1px solid var(--line); background: linear-gradient(135deg, var(--soft), color-mix(in srgb, var(--soft) 60%, var(--gold))); }
-.map-polish::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(18,18,18,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(18,18,18,.07) 1px, transparent 1px); background-size:44px 44px; opacity:.65; }
-.map-polish::after { content:""; position:absolute; inset:0; background: radial-gradient(circle at 48% 42%, rgba(255,255,255,.55), transparent 24%); }
-.map-marker { position:absolute; left:50%; top:42%; transform: translate(-50%,-50%); z-index:2; width:76px; height:76px; border-radius:50% 50% 50% 0; rotate:-45deg; background: var(--charcoal); box-shadow: 0 24px 60px rgba(0,0,0,.28); }
-.map-marker::after { content:""; position:absolute; inset:24px; border-radius:50%; background: var(--gold); }
-.map-label { position:absolute; z-index:3; left:24px; bottom:24px; right:24px; background: rgba(255,253,248,.92); backdrop-filter: blur(18px); border:1px solid var(--line); border-radius:22px; padding:20px 22px; }
-.address-card { display:flex; flex-direction:column; justify-content:space-between; gap:24px; }
-.address { font-family: var(--serif); font-size: 28px; line-height:1.15; letter-spacing:-.02em; margin:22px 0; }
-
-/* Contact */
-.contact { background: var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:stretch; }
-.contact-line { display:flex; flex-direction:column; gap:2px; padding:16px 0; border-bottom:1px solid var(--line); }
-.contact-line:last-of-type { border-bottom:0; }
-.contact-line span { font-size:13px; letter-spacing:.12em; text-transform:uppercase; color: var(--muted); }
-.contact-line strong { font-size:19px; font-weight:600; }
-.panel-dark { background: var(--charcoal); color:#fff; border-color: transparent; }
-.panel-dark .section-copy { color: rgba(255,255,255,.75); }
-.panel-dark .eyebrow { color: color-mix(in srgb, var(--gold) 70%, #fff); }
-
-.final-cta { padding: 100px 0; text-align:center; }
-.final-cta h2 { font-size: clamp(38px, 6vw, 80px); line-height:.98; letter-spacing:-.035em; margin:0 auto 22px; max-width: 900px; }
-.final-cta p { color: var(--muted); font-size:20px; max-width:700px; margin:0 auto 32px; }
-
-footer { background: var(--charcoal); color:#fff; padding:52px 0; }
-.footer-grid { display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; align-items:flex-end; }
-footer p { color: rgba(255,255,255,.78); margin:8px 0 0; font-size:15px; max-width: 560px; }
-footer a { color:#fff; text-decoration: underline; text-underline-offset:4px; }
-.sticky-claim { position:fixed; right:18px; bottom:18px; z-index:80; transition: opacity .25s, transform .25s; }
-.sticky-claim.is-hidden { opacity:0; pointer-events:none; transform: translateY(12px); }
-
-body[data-reviews="no"] .needs-reviews { display:none !important; }
-
-@media (max-width: 900px) {
-  .nav-links { display:none; }
-  .hero-grid, .split, .reviews-grid, .map-grid, .contact-grid { grid-template-columns: 1fr; }
-  .hero-copy { min-height:auto; gap:28px; }
-  .hero-image { min-height: 420px; }
-  .cards { grid-template-columns: 1fr 1fr; }
-  .reviews-section { border-radius:30px; margin:0 12px; }
-  .photo-panel { min-height: 380px; }
-}
-@media (max-width: 560px) {
-  .wrap { padding: 0 16px; }
-  .section { padding: 64px 0; }
-  .nav-inner { height:66px; }
-  .cards { grid-template-columns: 1fr; }
-  .strip-inner { border-radius: 26px; padding-left:18px; }
-  .strip-label { display:none; }
-  .review-float { left:14px; right:14px; bottom:14px; padding:14px 16px; }
-  .sticky-claim { left:16px; right:16px; }
-  .sticky-claim .btn { width:100%; }
-  .nav .btn { min-height:44px; padding:0 18px; font-size:14px; white-space:nowrap; }
-}
+:root{--bg:#f6f4ef;--paper:#fff;--ink:#14161a;--muted:#5b5f66;--line:rgba(20,22,26,.10);--acc:#c8341f;--acc2:#9d2515;--dark:#101216;--soft:#ecebe5;--r:22px;--max:1200px;
+--serif:"Fraunces",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html[data-theme=calm]{--acc:#3f7a61;--acc2:#2d5c47;--dark:#12201a;--soft:#e6ece4;--bg:#f4f3ee}
+html[data-theme=luxury]{--acc:#b0775a;--acc2:#8a5a42;--dark:#1b1416;--soft:#f0e2da;--bg:#f9f3ef}
+html[data-theme=modern]{--acc:#1b8797;--acc2:#126572;--dark:#0e1a20;--soft:#dcebee;--bg:#f2f6f7}
+html[data-theme=trust]{--acc:#1f4f9c;--acc2:#163a76;--dark:#0e1a2e;--soft:#e2e6f0;--bg:#f4f5f8}
+html[data-theme=natural]{--acc:#5f8a2f;--acc2:#476b1f;--dark:#14210f;--soft:#e4ead6;--bg:#f4f5ed}
+html[data-theme=industrial]{--acc:#d4571b;--acc2:#a84110;--dark:#16171a;--soft:#e8e4dd;--bg:#f2f0ec}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.02em;margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.2em;font-size:12.5px;font-weight:700;color:var(--acc)}
+.eyebrow:before{content:"";width:34px;height:2px;background:var(--acc)}
+.sec{padding:96px 0}.sec h2{font-size:clamp(32px,4.2vw,56px);line-height:1.04;margin:14px 0 18px}
+.lead{color:var(--muted);font-size:18px;max-width:640px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-weight:600;font-size:16px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s;font-family:var(--sans)}
+.btn:hover{transform:translateY(-2px)}
+.b-acc{background:var(--acc);color:#fff;box-shadow:0 14px 34px rgba(0,0,0,.22)}.b-acc:hover{background:var(--acc2)}
+.b-line{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.08)}
+.b-dark{background:var(--dark);color:#fff}.b-light{background:#fff;color:var(--ink)}
+svg.i{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(16,18,22,.92);backdrop-filter:blur(14px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:19px;line-height:1.1;max-width:300px}
+.logo b{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--acc);font-size:16px;flex:none}
+.nav nav{display:flex;gap:28px;font-size:15px;font-weight:500;color:rgba(255,255,255,.82)}.nav nav a:hover{color:#fff}
+.nav .btn{min-height:46px;padding:0 22px;font-size:15px}
+/* hero */
+.hero{position:relative;color:#fff;background:var(--dark);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(8,9,12,.88) 0%,rgba(8,9,12,.62) 48%,rgba(8,9,12,.25) 100%),var(--hero) center/cover no-repeat}
+.hero .wrap{position:relative;padding-top:120px;padding-bottom:110px}
+.hero .eyebrow{color:#fff}.hero .eyebrow:before{background:var(--acc)}
+.pill{display:inline-block;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(14px);font-size:13.5px;font-weight:500}
+.hero h1{font-size:clamp(44px,7vw,96px);line-height:.98;margin:22px 0 24px;max-width:880px}
+.hero h1 em{font-style:italic;color:#ffd9a0}
+.hero p{font-size:clamp(18px,2vw,22px);max-width:640px;color:rgba(255,255,255,.86);margin:0 0 34px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.proof{display:flex;gap:30px;flex-wrap:wrap;margin-top:46px;padding-top:28px;border-top:1px solid rgba(255,255,255,.18);font-size:15px;color:rgba(255,255,255,.85)}
+.proof span{display:flex;align-items:center;gap:10px}.stars{color:#ffc94a;letter-spacing:2px}
+/* strip */
+.strip{background:var(--dark);color:#fff;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08)}
+.strip .track{display:flex;gap:44px;white-space:nowrap;padding:22px 0;width:max-content;animation:mq 38s linear infinite;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:rgba(255,255,255,.8)}
+.strip .track i{color:var(--acc);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.strip .track{animation:none}}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.about .ph{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--soft) center/cover;box-shadow:0 30px 70px rgba(0,0,0,.18)}
+.about p{color:var(--muted);font-size:17.5px;margin:0 0 16px}
+.ticks{list-style:none;padding:0;margin:22px 0 30px;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;font-weight:600;align-items:flex-start}.ticks svg{color:var(--acc);margin-top:3px}
+.ill{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:99px}
+/* services */
+.dark{background:var(--dark);color:#fff}.dark .lead{color:rgba(255,255,255,.7)}.dark .eyebrow{color:#fff}
+.center{text-align:center}.center .eyebrow{justify-content:center}.center .lead{margin:0 auto}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.card{background:#1a1d23;border:1px solid rgba(255,255,255,.09);border-radius:var(--r);padding:34px 30px;text-align:left}
+.card .ic{display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:color-mix(in srgb,var(--acc) 22%,transparent);color:#fff;margin-bottom:22px}
+.card .ic svg{color:var(--acc);filter:brightness(1.5)}
+.card h3{font-size:23px;margin-bottom:10px}.card p{color:rgba(255,255,255,.66);margin:0;font-size:16px}
+.note{margin-top:30px;font-size:13px;color:rgba(255,255,255,.5)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:32px}
+.step b{font-family:var(--serif);font-size:44px;color:var(--acc);line-height:1}.step h3{font-size:22px;margin:14px 0 8px}.step p{margin:0;color:var(--muted)}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.gal div{aspect-ratio:4/5;border-radius:18px;background:var(--soft) center/cover;position:relative;overflow:hidden}
+.gal div:nth-child(1),.gal div:nth-child(4){transform:translateY(0)}
+.band{margin-top:22px;border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:var(--dark);color:#fff}
+.band .ph{min-height:300px;background:center/cover}.band .tx{padding:48px}
+.band h3{font-size:clamp(26px,3vw,38px);margin-bottom:12px}.band p{color:rgba(255,255,255,.75);margin:0 0 24px}
+/* reviews */
+.rev{background:var(--soft)}
+.revbox{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:44px;margin-top:40px}
+.big{font-family:var(--serif);font-size:96px;line-height:1;font-weight:800;color:var(--acc)}
+.revbox .stars{font-size:26px;display:block}
+/* faq */
+.faq{max-width:860px;margin:44px auto 0;display:grid;gap:12px;text-align:left}
+details{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 24px}
+summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--acc);font-size:24px;line-height:1}details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--muted)}
+/* cta */
+.cta{background:var(--acc);color:#fff;text-align:center;padding:84px 0}
+.cta h2{font-size:clamp(34px,5vw,64px);margin:0 0 14px}.cta p{max-width:560px;margin:0 auto 30px;font-size:19px;opacity:.92}
+.cta .cta-row{justify-content:center}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.info{display:grid;gap:14px;margin-top:28px}
+.info a,.info div{display:flex;gap:16px;align-items:center;padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.info small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.info strong{font-size:18px}.info svg{color:var(--acc);width:1.5em;height:1.5em}
+form{background:var(--soft);border-radius:var(--r);padding:34px;display:grid;gap:16px}
+form h3{font-size:26px}label{font-weight:600;font-size:14px;display:grid;gap:7px}
+input,textarea{font:inherit;padding:15px 16px;border:1px solid var(--line);border-radius:12px;background:#fff}
+textarea{min-height:110px;resize:vertical}
+.fnote{font-size:13px;color:var(--muted);margin:0}
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* claim bar */
+.claim{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);box-shadow:0 -10px 40px rgba(0,0,0,.14)}
+.claim .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:12px;padding-bottom:12px}
+.claim p{margin:0;font-size:14.5px;line-height:1.35;color:var(--muted)}.claim p b{color:var(--ink);display:block;font-size:16px}
+.claim .btn{min-height:48px;white-space:nowrap}
+@media(max-width:900px){.nav nav{display:none}.about,.contact,.band{grid-template-columns:1fr}.grid3,.steps{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}
+.sec{padding:68px 0}.hero .wrap{padding-top:80px;padding-bottom:72px}.revbox{grid-template-columns:1fr;padding:28px;gap:14px}.about{gap:34px}.band .tx{padding:30px}
+.claim p .sub{display:none}.logo{font-size:16px}.nav .btn span{display:none}.nav .btn{padding:0 18px}body{padding-bottom:96px}}
 </style>
 </head>
-<body data-reviews="yes">
-<noscript><p style="padding:24px;font-family:sans-serif">This website preview needs JavaScript enabled. Created by GoldRiver Marketing.</p></noscript>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#top"><b id="ini">GR</b><span id="lname"></span></a>
+  <nav><a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#faq">Questions</a><a href="#contact">Contact</a></nav>
+  <a class="btn b-acc" id="navcall" href="#contact"><svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span id="navtxt">Call now</span></a>
+</div></header>
 
-<section class="reveal" id="top">
-  <div class="reveal-inner">
-    <div class="reveal-card">
-      <div class="preview-pill">Complimentary website preview &bull; Created exclusively for <span data-t="b.name">&nbsp;</span></div>
-      <h1>I built this website for <span data-t="b.name">&nbsp;</span>.</h1>
-      <p>A website you can be proud to share, built to earn trust and bring in more local customers.</p>
-      <div class="reveal-note"><span>&darr;</span> Scroll to explore your website preview</div>
-    </div>
+<section class="hero" id="top"><div class="wrap">
+  <div class="pill" id="pill"></div>
+  <div class="eyebrow" id="h-eye" style="margin-top:22px"></div>
+  <h1 id="h1"></h1>
+  <p id="h-sub"></p>
+  <div class="cta-row" id="h-cta"></div>
+  <div class="proof" id="proof"></div>
+</div></section>
+
+<div class="strip" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<section class="sec" id="about"><div class="wrap about">
+  <div class="ph" id="about-img"><span class="ill">Illustrative image</span></div>
+  <div>
+    <div class="eyebrow">About us</div>
+    <h2 id="a-h"></h2>
+    <div id="a-p"></div>
+    <ul class="ticks" id="ticks"></ul>
+    <div class="cta-row" id="a-cta"></div>
   </div>
-  <div class="scroll-hint">Scroll to explore</div>
-</section>
+</div></section>
 
-<nav class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="#top"><span class="mark" data-t="b.initials"></span><span data-t="b.name"></span></a>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a class="needs-reviews" href="#reviews">Reviews</a>
-      <a href="#faq">Questions</a>
-      <a href="#find-us">Find us</a>
-    </div>
-    <a class="btn btn-primary" data-tel href="#contact">Call now</a>
+<section class="sec dark center" id="services"><div class="wrap">
+  <div class="eyebrow">How we can help</div>
+  <h2 id="s-h"></h2>
+  <p class="lead" id="s-p"></p>
+  <div class="grid3" id="cards"></div>
+  <p class="note">Services shown are a typical example for this type of business. Your final website would list your exact services.</p>
+</div></section>
+
+<section class="sec" id="how"><div class="wrap center">
+  <div class="eyebrow">Getting started</div>
+  <h2 id="p-h">Simple from the first call.</h2>
+  <div class="steps" id="steps" style="text-align:left"></div>
+</div></section>
+
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">A look around</div>
+  <h2 id="g-h"></h2>
+  <div class="gal" id="gal"></div>
+  <div class="band"><div class="ph" id="band-img"></div><div class="tx">
+    <h3 id="b-h"></h3><p id="b-p"></p><div class="cta-row" id="b-cta"></div></div></div>
+</div></section>
+
+<section class="sec rev" id="reviews"><div class="wrap center">
+  <div class="eyebrow">What people say</div>
+  <h2 id="r-h"></h2>
+  <div class="revbox" id="revbox" style="text-align:left"></div>
+</div></section>
+
+<section class="sec" id="faq"><div class="wrap center">
+  <div class="eyebrow">Common questions</div>
+  <h2>Good to know before you get in touch.</h2>
+  <div class="faq" id="faqs"></div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2 id="c-h"></h2><p id="c-p"></p><div class="cta-row" id="c-cta"></div>
+</div></section>
+
+<section class="sec" id="contact"><div class="wrap contact">
+  <div>
+    <div class="eyebrow">Get in touch</div>
+    <h2 id="k-h"></h2>
+    <p class="lead" id="k-p"></p>
+    <div class="info" id="info"></div>
   </div>
-</nav>
+  <form id="form" onsubmit="return false">
+    <h3>Send a message</h3>
+    <label>Name<input placeholder="Your name"></label>
+    <label>Phone<input placeholder="Best number to reach you"></label>
+    <label>How can we help?<textarea placeholder="Tell us a little about what you need"></textarea></label>
+    <button class="btn b-acc" type="button" id="send">Send message</button>
+    <p class="fnote" id="fnote">Preview form. On your live website, messages go straight to you.</p>
+  </form>
+</div></section>
 
-<main id="website">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <div>
-          <div class="eyebrow"><span data-t="b.category"></span> in <span data-t="b.city"></span></div>
-          <h2 data-t="c.headline"></h2>
-          <p class="lead" data-t="c.sub"></p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" data-tel href="#contact">Call <span data-t="b.phone"></span></a>
-            <a class="btn btn-light" data-maps target="_blank" rel="noopener" href="#find-us">Get directions</a>
-          </div>
-        </div>
-        <div class="section-copy">A website that reflects the quality of the business and helps more local customers choose it.</div>
-      </div>
-      <div class="hero-image" role="img" aria-label="Illustrative image">
-        <span class="tag">Illustrative image</span>
-        <div class="review-float needs-reviews">
-          <strong data-t="b.rating"></strong>
-          <div><span class="stars" id="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small><span data-t="b.reviews"></span> Google reviews</small></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer><div class="wrap"><span id="foot"></span><span>Complimentary preview created by GoldRiver Marketing. Images are illustrative.</span></div></footer>
 
-  <div class="wrap strip">
-    <div class="strip-inner">
-      <span class="strip-label">Services</span>
-      <div class="strip-list" id="strip"></div>
-    </div>
-  </div>
-
-  <section class="trust">
-    <div class="wrap trust-grid">
-      <div class="trust-item"><strong>Local</strong>Serving customers in <span data-t="b.city"></span> and nearby areas.</div>
-      <div class="trust-item needs-reviews"><strong>Rated on Google</strong><span data-t="b.rating"></span> from <span data-t="b.reviews"></span> Google reviews.</div>
-      <div class="trust-item"><strong>Easy to contact</strong>Call and directions buttons on every page.</div>
-      <div class="trust-item"><strong>Made to be found</strong>Clear services, questions and location in one place.</div>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="wrap">
-      <div class="eyebrow">Services</div>
-      <h2 class="section-title">What <span data-t="b.name"></span> can help with.</h2>
-      <p class="section-copy">Clear service information helps people understand what is offered and get in touch with confidence.</p>
-      <div class="cards" id="cards"></div>
-      <p class="note">Service descriptions are indicative and would be confirmed with you before this website goes live.</p>
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="wrap split">
-      <div class="photo-panel" role="img" aria-label="Illustrative image"><span class="tag">Illustrative image</span></div>
-      <div class="panel">
-        <div class="eyebrow">About</div>
-        <h2 class="section-title">A stronger first impression.</h2>
-        <p class="section-copy" data-t="c.about"></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section reviews-section needs-reviews" id="reviews">
-    <div class="wrap reviews-grid">
-      <div>
-        <div class="eyebrow">Already trusted locally</div>
-        <div class="score" data-t="b.rating"></div>
-        <div class="stars" id="stars2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="section-copy"><span data-t="b.name"></span> has <span data-t="b.reviews"></span> Google reviews. This website puts that trust in front of customers at the moment they decide to call.</p>
-        <a class="btn btn-gold" data-reviews target="_blank" rel="noopener" href="#reviews">Read the Google reviews</a>
-      </div>
-      <div class="review-card">
-        <h3>Your reviews are one of your strongest assets.</h3>
-        <p>Customers feel more confident when trust signals are easy to see. The figures here come straight from the public Google Business Profile.</p>
-        <div class="review-stats">
-          <div class="review-stat"><strong data-t="b.rating"></strong><span>Google rating</span></div>
-          <div class="review-stat"><strong data-t="b.reviews"></strong><span>Google reviews</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="faq">
-    <div class="wrap">
-      <div class="eyebrow">Common questions</div>
-      <h2 class="section-title">Useful answers before customers call.</h2>
-      <div class="faq" id="faq-list"></div>
-    </div>
-  </section>
-
-  <section class="section" id="find-us">
-    <div class="wrap map-grid">
-      <a class="map-polish" data-maps target="_blank" rel="noopener" href="#find-us" aria-label="Open the location on Google Maps">
-        <div class="map-marker"></div>
-        <div class="map-label">
-          <strong data-t="b.name"></strong><br>
-          <span id="addr-line"></span><br>
-          <span style="color:var(--gold-dark);font-weight:600;">Open the exact location on Google Maps &rarr;</span>
-        </div>
-      </a>
-      <div class="panel address-card">
-        <div>
-          <div class="eyebrow">Find us</div>
-          <h2 class="section-title">Visit <span data-t="b.name"></span>.</h2>
-          <div class="address" id="addr-block"></div>
-        </div>
-        <div class="hero-actions">
-          <a class="btn btn-primary" data-maps target="_blank" rel="noopener" href="#find-us">Get directions</a>
-          <a class="btn btn-light" data-tel href="#contact">Call now</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section contact" id="contact">
-    <div class="wrap contact-grid">
-      <div class="panel">
-        <div class="eyebrow">Contact</div>
-        <h2 class="section-title">Get in touch.</h2>
-        <div class="contact-line"><span>Phone</span><strong><a data-tel href="#contact"><span data-t="b.phone"></span></a></strong></div>
-        <div class="contact-line"><span>Address</span><strong id="addr-contact"></strong></div>
-        <div class="hero-actions">
-          <a class="btn btn-primary" data-tel href="#contact">Call <span data-t="b.phone"></span></a>
-          <a class="btn btn-light" data-maps target="_blank" rel="noopener" href="#find-us">Get directions</a>
-        </div>
-      </div>
-      <div class="panel panel-dark">
-        <div class="eyebrow">Like what you see?</div>
-        <h2 class="section-title">Make this website yours.</h2>
-        <p class="section-copy">This preview can be personalised with your own photography, colours, services, questions and Google Business Profile details.</p>
-        <div class="hero-actions"><a class="btn btn-gold" href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">Make this website mine</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="final-cta">
-    <div class="wrap">
-      <h2>Be found, be trusted, be contacted directly.</h2>
-      <p>One clear place to see the services, find the location and get in touch, without depending on third-party platforms.</p>
-      <a class="btn btn-primary" href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">Make this website mine</a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap footer-grid">
-    <div>
-      <strong>Created by GoldRiver Marketing</strong>
-      <p>Complimentary website preview for demonstration purposes. Photography shown is illustrative stock imagery, not images of the business's own work.</p>
-    </div>
-    <a href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">goldrivermarketing.co.uk</a>
-  </div>
-</footer>
-
-<div class="sticky-claim"><a class="btn btn-gold" href="https://goldrivermarketing.co.uk" target="_blank" rel="noopener">Make this website mine</a></div>
+<div class="claim"><div class="wrap">
+  <p><b>This website is already built for <span id="cname"></span>.</b><span class="sub">Own it for £150 for the first 12 months of hosting. No website design fee.</span></p>
+  <a class="btn b-acc" id="claim" href="https://goldrivermarketing.co.uk/contact">Make this website mine</a>
+</div></div>
 
 <script>
-(function () {
-  var D ={"b":{"name":"Clapham North","initials":"CN","category":"Chiropractor","city":"London","address":"CLapham North Art Centre, 3D Clapham North Arts Centre, 26-32 Voltaire Road, 32 Voltaire Rd","postcode":"SW4 6DH","phone":"+44 20 8772 8442","phoneTel":"+442087728442","rating":"4.9","reviews":"9","mapsLink":"https://www.google.com/maps/place/Clapham+North/@51.465984299999995,-0.1337908,14z/data=!4m8!1m2!2m1!1sClapham+North!3m4!1s0x487604516eb18047:0xaceb4ea4b3dbbd45!8m2!3d51.465984299999995!4d-0.1337908","reviewsLink":"","theme":"calm","hero":"https://business-previews-2026.vercel.app/assets/images/medical/hero/medical_hero_04.webp","hero2":"https://business-previews-2026.vercel.app/assets/images/medical/hero/medical_hero_08.webp","about":"https://business-previews-2026.vercel.app/assets/images/medical/about/medical_about_04.webp"},"c":{"headline":"Your Path to Better Health","sub":"Experienced chiropractors offering care in Clapham North, London.","about":"A well-designed website can effectively showcase chiropractic services, providing potential clients with essential information about treatments, approaches, and the benefits of chiropractic care. It serves as a platform for educating visitors on health and wellness topics while facilitating easy communication with the practice.","services":[{"t":"Spinal Adjustments","d":"Spinal adjustments aim to correct misalignments in the spine to improve overall health."},{"t":"Posture Correction","d":"Posture correction services help individuals achieve better alignment and reduce strain on the body."},{"t":"Sports Injuries","d":"Chiropractors provide treatment for sports-related injuries to aid recovery and enhance performance."},{"t":"Massage Therapy","d":"Massage therapy can complement chiropractic care by relieving muscle tension and promoting relaxation."},{"t":"Wellness Consultations","d":"Wellness consultations focus on lifestyle advice to support overall health and prevent future issues."},{"t":"Rehabilitation Exercises","d":"Rehabilitation exercises are designed to strengthen muscles and improve mobility after injury."}],"faq":[{"q":"What conditions can chiropractic care help with?","a":"Chiropractic care may assist with various conditions; please call for more specific information."},{"q":"Is chiropractic treatment safe?","a":"Chiropractic treatment is generally considered safe; however, it's best to consult directly for your situation."},{"q":"How long does a typical session last?","a":"Session lengths can vary; we recommend contacting us for details specific to your needs."},{"q":"Do I need a referral to see a chiropractor?","a":"Typically, no referral is needed, but it's advisable to check with us beforehand."}]}};
-  var b = D.b || {}, c = D.c || {};
-  var root = document.documentElement;
-  function get(path) { var p = path.split("."), o = D; for (var i = 0; i < p.length; i++) { if (o == null) return ""; o = o[p[i]]; } return o == null ? "" : String(o); }
-  function safeUrl(u) { return /^https?:\/\/[^\s"'()<>]+$/.test(u || "") ? u : ""; }
-  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+var D = {"b": {"name": "Clapham North", "initials": "CN", "category": "Chiropractor", "city": "London", "address": "Clapham North Arts Centre, 26-32 Voltaire Road", "postcode": "SW4 6DH", "phone": "+44 20 8772 8442", "phoneTel": "+442087728442", "rating": "4.9", "reviews": "9", "theme": "calm", "lead": "LEAD-0032"}};
+</script>
+<script>
+(function(){
+var b=(D&&D.b)||{}, ai=(D&&D.c)||{};
+var $=function(i){return document.getElementById(i)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var IC={
+ phone:'<svg class="i" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+ pin:'<svg class="i" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+ tick:'<svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>',
+ star:'<svg class="i" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>',
+ clock:'<svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+ shield:'<svg class="i" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
+ heart:'<svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>',
+ tool:'<svg class="i" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg>',
+ chat:'<svg class="i" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+ leaf:'<svg class="i" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13c0-6 7-9 16-9 0 9-3 16-9 16z"/><path d="M4 21c3-6 6-9 10-11"/></svg>'
+};
+var ICS=['heart','shield','star','leaf','clock','tool'];
 
-  root.setAttribute("data-theme", b.theme || "calm");
-  document.title = (b.name || "Website") + " | Website preview by GoldRiver Marketing";
-  var md = document.querySelector('meta[name="description"]');
-  if (md) md.setAttribute("content", "A complimentary website preview created for " + (b.name || "your business") + " by GoldRiver Marketing.");
+/* ---------- industry library: fixed, honest copy. {n}=name {c}=city {k}=category ---------- */
+var L={
+medical:{h:'Caring, professional treatment in {c}.',s:'{n} is a local {k} practice making it easy to book, understand your options and get the help you need.',
+ a:['{n} is a {k} practice serving patients in and around {c}. Every visit starts with listening, so the treatment you receive is based on you and not on a one-size-fits-all routine.','A clear explanation of what is going on, what to expect and the options available. That is what people want before they book, and it is how this website is built to help new patients feel at ease.'],
+ tk:['Clear, jargon-free explanations','Appointments that are easy to book','Local to {c} and the surrounding area'],
+ sv:[['Initial consultation','A first appointment to talk through your concerns, history and goals.'],['Assessment','A thorough look at the problem so the right plan can be agreed with you.'],['Treatment','Hands-on care tailored to what you need, explained at every step.'],['Follow-up care','Check-ins to track progress and adjust your plan when needed.'],['Advice & aftercare','Practical guidance to help you stay well between visits.'],['Ongoing support','Regular care to keep you moving and feeling your best.']],
+ st:[['Get in touch','Call or send a message and tell us what is bothering you.'],['Come in for a consultation','We talk, assess and agree a sensible plan together.'],['Start feeling better','Begin treatment with support and clear advice along the way.']],
+ fq:[['How do I book an appointment?','Call us or use the message form and we will find a time that suits you.'],['What should I expect at a first visit?','A conversation about your concerns, an assessment, and a clear explanation of the next steps.'],['Where are you based?','See the address and map in the contact section below.'],['How much does it cost?','Please get in touch and we will happily explain fees before you commit to anything.']],
+ ct:'Ready to take the first step?',cp:'Get in touch today and we will find a time that works for you.'},
+wellness:{h:['Feel better, live better in {c}.','Real support, tailored to you in {c}.','Your next chapter starts here in {c}.'],s:'{n} offers friendly, personal {k} support designed around your goals and your life.',
+ a:['{n} is a {k} service for people in {c} who want real, lasting change. Sessions are relaxed, personal and focused on what matters to you.','Whether you are just starting out or looking for a fresh approach, a friendly conversation is the best first step.'],
+ tk:['Personal, one-to-one attention','A welcoming, judgement-free space','Local to {c}'],
+ sv:[['Free introductory chat','A relaxed first conversation to see how we can help.'],['One-to-one sessions','Time and attention focused entirely on you.'],['Personal plans','A realistic plan built around your goals and routine.'],['Goal setting','Clear, achievable steps so you know where you are heading.'],['Progress reviews','Regular check-ins to celebrate wins and adjust the plan.'],['Ongoing support','Encouragement and accountability as you go.']],
+ st:[['Say hello','Call or message to arrange a first chat.'],['Plan together','We talk through your goals and agree an approach.'],['Make progress','Start your sessions and build momentum with support.']],
+ fq:[['Is the first conversation free to ask about?','Get in touch and we will explain how first sessions work.'],['Do I need any experience?','Not at all. Everything is tailored to where you are right now.'],['Where do sessions take place?','See the contact section for the address and directions.'],['How do I book?','Call or use the message form and we will arrange a time.']],
+ ct:'Ready to make a start?',cp:'Drop us a message or give us a call. We would love to hear from you.'},
+hypno:{h:['Calm, focused hypnotherapy in {c}.','Change your habits. Find your calm in {c}.'],s:'{n} offers relaxed, one-to-one hypnotherapy sessions in {c}, with friendly support at every step.',
+ a:['{n} is a hypnotherapy practice serving clients in and around {c}. Sessions are relaxed, private and paced to suit you, so you always feel comfortable and in control.','A first conversation is the best way to find out whether hypnotherapy is right for you and what to expect.'],
+ tk:['Relaxed, private one-to-one sessions','A calm, judgement-free space','Local to {c}'],
+ sv:[['Initial consultation','A relaxed first conversation about what you would like to change.'],['Hypnotherapy sessions','Guided, comfortable sessions tailored to you.'],['Relaxation & stress support','Techniques to help you unwind and feel more at ease.'],['Habit change support','Focused sessions for the habits you want to leave behind.'],['Confidence & motivation','Support to help you feel more positive and focused.'],['Follow-up sessions','Regular check-ins to build on your progress.']],
+ st:[['Get in touch','Call or message to ask any questions.'],['Talk it through','We discuss your goals and how sessions work.'],['Begin your sessions','Start in a calm, supportive setting.']],
+ fq:[['What happens in a first session?','A relaxed conversation about your goals, an explanation of how hypnotherapy works, and the next steps.'],['Will I be in control?','Yes. Sessions are relaxed and you remain aware throughout.'],['Where are you based?','See the contact section for the address and map.'],['How do I book?','Call or use the message form.']],
+ ct:'Ready to take the first step?',cp:'Get in touch and ask any questions you like.'},
+nutrition:{h:'Eating well made simple in {c}.',s:'{n} helps you build healthy habits that fit real life, with friendly, practical advice.',
+ a:['{n} is a {k} service supporting people across {c}. The focus is on realistic changes you can stick to, not fad diets.','Every plan starts with a conversation about you: your goals, your routine and what you enjoy eating.'],
+ tk:['Practical, realistic advice','No fad diets or pressure','Local to {c}'],
+ sv:[['Initial consultation','Talk through your goals, habits and any questions you have.'],['Personalised plans','Guidance built around your lifestyle and preferences.'],['Weight management','Sustainable support for reaching and keeping a healthy weight.'],['Healthy eating advice','Simple, practical changes that fit into everyday life.'],['Follow-up sessions','Regular reviews to keep you on track.'],['Ongoing support','Encouragement when you need it most.']],
+ st:[['Get in touch','Tell us what you would like to achieve.'],['Build your plan','We create a realistic approach that suits your life.'],['Stay on track','Regular support to help you keep going.']],
+ fq:[['What happens at a first appointment?','A friendly chat about your goals and habits, then agreeing the next steps.'],['Do I have to follow a strict diet?','No. The focus is on sustainable habits that fit your life.'],['Where are you based?','See the contact section for the address and map.'],['How do I book?','Call or use the message form.']],
+ ct:'Ready to feel your best?',cp:'Book a first conversation today and take the first step.'},
+massage:{h:'Relax, restore and recover in {c}.',s:'{n} offers calming, professional treatments in a welcoming space.',
+ a:['{n} is a {k} service in {c} that puts your comfort first. From the moment you arrive, the aim is simple: help you relax and feel better.','Treatments are tailored to you, whether you want to unwind, ease tension or simply take time for yourself.'],
+ tk:['A calm, welcoming environment','Treatments tailored to you','Local to {c}'],
+ sv:[['Relaxation treatments','Unwind and let the stress of the week melt away.'],['Deep tissue work','Focused pressure to ease stubborn muscle tension.'],['Targeted treatments','Concentrated care for areas that need it most.'],['Consultation','A short chat so every treatment suits you.'],['Treatment plans','Regular sessions to maintain results.'],['Gift options','A thoughtful treat for someone special. Just ask.']],
+ st:[['Choose a time','Call or message to book your treatment.'],['Arrive and relax','Talk through how you are feeling and what you need.'],['Leave refreshed','Enjoy the treatment and the calm afterwards.']],
+ fq:[['How do I book?','Call us or use the message form to find a time.'],['What should I wear?','Comfortable clothing is fine. We will explain everything when you arrive.'],['Where are you?','See the contact section for the address and directions.'],['How much is a treatment?','Get in touch and we will happily share prices.']],
+ ct:'Time to treat yourself?',cp:'Book your treatment today.'},
+beauty:{h:'Look good. Feel wonderful in {c}.',s:'{n} is a friendly {k} in {c} where every visit is about you.',
+ a:['{n} is a local {k} welcoming clients from across {c}. The aim is simple: you leave looking great and feeling even better.','From a quick refresh to something special, appointments are relaxed, friendly and tailored to you.'],
+ tk:['A warm, welcoming atmosphere','Appointments made easy','Local to {c}'],
+ sv:[['Consultation','Tell us what you have in mind and we will advise.'],['Signature treatments','The favourites our clients come back for.'],['Special occasions','Be ready for the big day with time to spare.'],['Regular maintenance','Keep your look fresh between visits.'],['Skin & care advice','Friendly tips on looking after your results.'],['Gift options','A lovely gift for someone special. Just ask.']],
+ st:[['Book a time','Call or message to choose an appointment.'],['Come and relax','Talk through what you would like.'],['Leave glowing','Enjoy the result and the experience.']],
+ fq:[['How do I book?','Call or use the message form.'],['Do you take walk-ins?','Please get in touch to check availability.'],['Where are you?','See the contact section for the address and map.'],['What are your prices?','Get in touch and we will happily explain.']],
+ ct:'Ready for your next appointment?',cp:'Get in touch and we will find you a time.'},
+pets:{h:'Happy, healthy pets in {c}.',s:'{n} looks after your pet like family, with friendly, reliable care.',
+ a:['{n} is a {k} serving pet owners across {c}. We know how much your pet means to you, and we treat every animal with patience and care.','Whether it is a first visit or a regular booking, we keep things calm, clear and stress-free.'],
+ tk:['Patient, caring handling','Friendly and reliable','Local to {c}'],
+ sv:[['Meet and greet','A relaxed first visit so your pet feels at ease.'],['Regular care','Reliable appointments that fit your routine.'],['Tailored to your pet','Every animal is different and care reflects that.'],['Advice for owners','Practical tips to keep your pet comfortable.'],['Flexible booking','Appointments that work around you.'],['Ongoing support','We are here whenever you have questions.']],
+ st:[['Get in touch','Tell us about your pet.'],['Pick a time','We book a slot that suits you both.'],['Relax','Your pet is in safe, caring hands.']],
+ fq:[['How do I book?','Call or use the message form.'],['Is my pet safe with you?','Care and comfort come first. Ask us anything before you book.'],['Where are you?','See the contact section for the address.'],['What are your prices?','Get in touch and we will explain.']],
+ ct:'Book a visit for your pet.',cp:'Call or message us today.'},
+trades:{h:'Reliable local tradespeople in {c}.',s:'{n} delivers tidy, dependable work for homes and businesses across {c}.',
+ a:['{n} is a local {k} covering {c} and the surrounding area. Customers want someone who turns up, explains the job clearly and finishes it properly, and that is the standard to aim for.','Get in touch for friendly advice and a straightforward quote.'],
+ tk:['Clear, no-pressure quotes','Tidy, careful workmanship','Local to {c}'],
+ sv:[['Free quotes','Tell us about the job and we will give you a straightforward quote.'],['Repairs & fixes','Quick help when something has gone wrong.'],['New installations','Done properly, the first time.'],['Maintenance','Keep small problems from becoming big ones.'],['Homes & businesses','Domestic and commercial customers welcome.'],['Friendly advice','Honest guidance on the best way to tackle the job.']],
+ st:[['Tell us about the job','Call or message with a few details.'],['Get a clear quote','We explain what is needed and the cost upfront.'],['Job done right','Work completed tidily and on time.']],
+ fq:[['Do you give free quotes?','Get in touch with the details and we will advise.'],['What areas do you cover?','{c} and the surrounding area. Ask if you are unsure.'],['How quickly can you start?','Call us and we will let you know our availability.'],['How do I book?','Call or use the message form.']],
+ ct:'Need a hand with a job?',cp:'Call today for friendly advice and a clear quote.'},
+home_services:{h:'Dependable home services in {c}.',s:'{n} looks after your home with friendly, reliable service you can count on.',
+ a:['{n} is a {k} serving households across {c}. Turn up on time, do the job well, leave things tidy: that is what customers expect and what we aim for.','Get in touch for a friendly chat and a clear price.'],
+ tk:['On time and tidy','Clear, upfront pricing','Local to {c}'],
+ sv:[['Free quotes','Tell us what you need and we will give you a clear price.'],['Regular visits','Set up a schedule that suits your home.'],['One-off jobs','Perfect for a single task or a seasonal refresh.'],['Homes of all sizes','From flats to family houses.'],['Flexible appointments','Times that work around you.'],['Friendly advice','Helpful tips from people who know the job.']],
+ st:[['Get in touch','Tell us what you need.'],['Agree a price','A clear, simple quote.'],['Enjoy the result','The job done, the home looking great.']],
+ fq:[['Do you give quotes?','Yes, get in touch with the details.'],['What areas do you cover?','{c} and nearby. Ask if you are unsure.'],['How do I book?','Call or use the message form.'],['Can you work around my schedule?','We will do our best to find a time that suits.']],
+ ct:'Ready for a hassle-free home?',cp:'Get in touch for a friendly quote.'},
+automotive:{h:'Honest, expert car care in {c}.',s:'{n} keeps {c} on the road with clear advice and fair, quality work.',
+ a:['{n} is a local {k} looking after drivers across {c}. People want to know what is wrong, what it will cost and when it will be ready, and that is how it should be explained.','Call us or drop in and talk through your car with someone who listens.'],
+ tk:['Clear advice before any work starts','Fair, transparent pricing','Local to {c}'],
+ sv:[['Servicing','Keep your car running smoothly and reliably.'],['MOT preparation','Help getting ready for test day.'],['Diagnostics','Find the cause of a warning light or odd noise.'],['Repairs','Quality repairs explained before they begin.'],['Tyres & brakes','Essential safety work done properly.'],['Advice','Straight answers on what needs doing now and what can wait.']],
+ st:[['Tell us the problem','Call or message with what you are noticing.'],['Get a clear price','We explain the work and cost upfront.'],['Back on the road','Your car returned as promised.']],
+ fq:[['Can I get a quote?','Get in touch with your car details and what you need.'],['How do I book?','Call or use the message form.'],['Where are you?','See the contact section for the address.'],['Will you explain the work?','Yes, always before it starts.']],
+ ct:'Need your car looked at?',cp:'Call us for friendly, honest advice.'},
+driving_school:{h:'Learn to drive with confidence in {c}.',s:'{n} offers patient, friendly driving lessons that help you pass and drive safely for life.',
+ a:['{n} is a {k} teaching learners across {c}. Lessons are calm, clear and paced to suit you, whether you are starting from scratch or building confidence.','Get in touch to chat about lessons and find a time that suits you.'],
+ tk:['Patient, friendly instruction','Lessons tailored to you','Local to {c}'],
+ sv:[['Beginner lessons','Start from zero in a calm, supportive way.'],['Intermediate lessons','Build skill and confidence on real roads.'],['Test preparation','Get ready for your driving test.'],['Refresher lessons','Get back behind the wheel with support.'],['Flexible booking','Lesson times to fit your week.'],['Block bookings','Ask about options for intensive learning.']],
+ st:[['Get in touch','Call or message to ask about lessons.'],['Book your first lesson','We agree a time and a starting point.'],['Pass with confidence','Learn at your pace and take your test when you are ready.']],
+ fq:[['I have never driven. Is that OK?','Of course. Lessons start wherever you are.'],['How do I book?','Call or use the message form.'],['Which areas do you cover?','{c} and nearby. Ask if you are unsure.'],['What are your prices?','Get in touch and we will explain.']],
+ ct:'Ready to start driving?',cp:'Book your first lesson today.'},
+education:{h:'Learning that works, in {c}.',s:'{n} helps learners build skills and confidence with friendly, focused teaching.',
+ a:['{n} is a {k} serving students in and around {c}. Good teaching is patient, clear and encouraging, and that is the heart of how we work.','Get in touch to talk about what you or your child would like to achieve.'],
+ tk:['Friendly, encouraging teaching','Support tailored to each learner','Local to {c}'],
+ sv:[['Introductory chat','Talk through goals and see if we are a good fit.'],['One-to-one lessons','Focused attention on what you need.'],['Small groups','Learn alongside others in a supportive setting.'],['Exam preparation','Structured support as exams approach.'],['Progress updates','Clear feedback on how things are going.'],['Flexible scheduling','Times to fit around school and work.']],
+ st:[['Get in touch','Tell us about the learner.'],['Plan together','We agree goals and a schedule.'],['See progress','Build skill and confidence week by week.']],
+ fq:[['How do I enquire?','Call or use the message form.'],['Where are lessons held?','See the contact section for the address.'],['What ages or levels do you teach?','Get in touch and we will advise.'],['What are your fees?','Contact us and we will explain.']],
+ ct:'Ready to get started?',cp:'Get in touch to talk about lessons.'},
+gardens:{h:'Beautiful outdoor spaces in {c}.',s:'{n} helps you enjoy a garden you are proud of, without the hard work.',
+ a:['{n} is a local {k} caring for gardens across {c}. A tidy, welcoming garden makes a home feel finished, and we make it easy to get there.','Get in touch for friendly advice and a clear quote.'],
+ tk:['Tidy, careful work','Clear quotes with no surprises','Local to {c}'],
+ sv:[['Free quote','Tell us about your garden and we will advise.'],['Regular maintenance','Keep your garden looking its best all year.'],['Lawn care','Neat, healthy lawns through the seasons.'],['Planting & borders','Colour and structure that suits your space.'],['Clear-ups','A fresh start for overgrown areas.'],['Seasonal work','Hedges, pruning and tidy-ups when you need them.']],
+ st:[['Get in touch','Tell us about your garden.'],['Agree the plan','A clear quote and a date.'],['Enjoy your garden','Come home to a space you love.']],
+ fq:[['Do you give free quotes?','Get in touch and we will advise.'],['What areas do you cover?','{c} and nearby.'],['Do you do regular visits?','Yes. Ask about a regular schedule.'],['How do I book?','Call or use the message form.']],
+ ct:'Ready for a garden you love?',cp:'Call for a friendly chat and quote.'},
+locksmith:{h:'Fast, trusted locksmith in {c}.',s:'{n} is here when you are locked out or want your home or business more secure.',
+ a:['{n} is a local {k} covering {c}. Being locked out is stressful, so the aim is simple: a clear answer, a fair price and help that gets you back in.','Call us for friendly, straightforward advice.'],
+ tk:['Clear pricing before work starts','Tidy, careful work','Local to {c}'],
+ sv:[['Lockouts','Help getting back into your home or business.'],['Lock changes','Replace locks after a move or a break-in.'],['Lock repairs','Fix sticking, broken or worn locks.'],['Security upgrades','Improve protection for doors and windows.'],['Key cutting','Spare keys made to order.'],['Advice','Honest guidance on the right solution.']],
+ st:[['Call us','Tell us what has happened.'],['Get a clear price','We explain the work and cost.'],['Problem solved','Secure and back to normal.']],
+ fq:[['How quickly can you come?','Call us and we will tell you our availability.'],['Do you give a price first?','Yes, before work starts.'],['What areas do you cover?','{c} and nearby.'],['How do I book?','Call or use the message form.']],
+ ct:'Locked out or need a lock fixed?',cp:'Call now for help.'},
+moving:{h:'Stress-free moving in {c}.',s:'{n} takes the heavy lifting out of moving day, with careful, friendly service.',
+ a:['{n} is a {k} service helping people move across {c} and beyond. Moving is stressful enough, so we keep things simple, careful and clear.','Get in touch for a straightforward quote.'],
+ tk:['Careful handling of your belongings','Clear quotes upfront','Local to {c}'],
+ sv:[['Free quote','Tell us about your move and we will advise.'],['House moves','From flats to family homes.'],['Packing help','Let us take care of the boxes.'],['Loading & unloading','The heavy lifting, done carefully.'],['Single items','Moving just one or two things? We can help.'],['Business moves','Offices and shops, with minimal disruption.']],
+ st:[['Get in touch','Tell us your date and addresses.'],['Agree a quote','Clear, upfront pricing.'],['Move day','We take care of the rest.']],
+ fq:[['Do you give quotes?','Yes, get in touch with details.'],['Do you move small loads?','Ask us. We often can.'],['What areas do you cover?','{c} and beyond.'],['How do I book?','Call or use the message form.']],
+ ct:'Planning a move?',cp:'Call for a friendly, no-obligation quote.'},
+professional:{h:'Clear, trusted advice in {c}.',s:'{n} helps individuals and businesses in {c} get things done with confidence.',
+ a:['{n} is a {k} serving clients across {c}. Good advice is clear, practical and delivered by someone who listens first.','Get in touch to talk through what you need.'],
+ tk:['Clear, practical advice','Responsive and approachable','Local to {c}'],
+ sv:[['Initial conversation','Talk through your situation, no jargon.'],['Tailored advice','Guidance that fits your circumstances.'],['Ongoing support','Help when you need it, not just once.'],['Document & paperwork help','Get the details right.'],['Reviews','A fresh look at where you stand.'],['Clear next steps','So you always know what happens next.']],
+ st:[['Get in touch','Tell us what you need.'],['Talk it through','We listen and explain your options.'],['Move forward','Clear steps with support throughout.']],
+ fq:[['How do I get started?','Call or use the message form.'],['Do you work with businesses and individuals?','Get in touch and we will advise.'],['Where are you based?','See the contact section.'],['What are your fees?','Contact us and we will explain.']],
+ ct:'Ready to talk?',cp:'Get in touch for a friendly first conversation.'},
+business:{h:'Welcome to {n}, proudly serving {c}.',s:'{n} is a local {k} making it easy for customers in {c} to get in touch.',
+ a:['{n} is a local {k} based in {c}. We believe in friendly service, clear communication and doing the job properly.','Get in touch and let us show you how we can help.'],
+ tk:['Friendly, personal service','Easy to contact','Local to {c}'],
+ sv:[['Get in touch','Tell us what you need and we will advise.'],['Tailored to you','Solutions that fit your situation.'],['Clear communication','You always know what is happening.'],['Reliable service','Dependable, every time.'],['Local knowledge','Based in and committed to {c}.'],['Friendly advice','Honest guidance from people who care.']],
+ st:[['Get in touch','Call or message us.'],['Talk it through','We discuss what you need.'],['Get it done','Clear steps, good results.']],
+ fq:[['How do I get in touch?','Call or use the message form.'],['Where are you based?','See the contact section.'],['What areas do you cover?','{c} and nearby.'],['How much does it cost?','Get in touch and we will explain.']],
+ ct:'Ready to get in touch?',cp:'We would love to hear from you.'}
+};
+var KW=[['hypno',/hypno|hipno/i],['wellness',/hypno|hipno|coach|counsel|psychother|therapist|psycholog|mindful|wellness|wellbeing|sa[gğ]l[ıi]k|sa[uú]de|yoga|pilates|personal train|fitness|life /i],['medical',/chiro|osteo|physio|dent|clinic|doctor|medic|podiat|optic|acupunct|health/i],['nutrition',/nutri|diet/i],['massage',/massage|spa\b/i],['beauty',/hair|beauty|barber|salon|nail|lash|brow|tattoo|makeup/i],['pets',/dog|pet |pet$|vet|groom|kennel|cat /i],['driving_school',/driving|driver/i],['automotive',/mechanic|auto |auto$|car repair|car inspection|garage|mot\b|tyre|vehicle/i],['locksmith',/lock/i],['moving',/mov|removal|man and van|storage/i],['gardens',/garden|lawn|tree|landscap|paving/i],['home_services',/clean|carpet|window|pressure|laundry|dry clean|pest/i],['trades',/roof|plumb|electric|builder|joiner|carpent|heating|gas|plaster|tiler|handy|construct|contractor|paint|decorat|maintenance/i],['education',/tutor|school|teach|lesson|academy|music|instructor|piano|guitar/i],['professional',/account|solicitor|lawyer|financ|mortgage|insur|consult|estate agent|architect/i]];
 
-  [["--hero-img", b.hero], ["--hero2-img", b.hero2], ["--about-img", b.about]].forEach(function (x) {
-    var u = safeUrl(x[1]); if (u) root.style.setProperty(x[0], 'url("' + u + '")');
-  });
+var name=(b.name||'').trim();
+if(!name){document.body.innerHTML='<p style="padding:40px;font-family:sans-serif">Preview unavailable.</p>';return;}
+var city=(b.city||'').trim()||'your area', cat=(b.category||'').trim();
+var grp=(b.group&&L[b.group])?b.group:null;
+if(!grp){for(var i=0;i<KW.length;i++){if(KW[i][1].test(cat)){grp=KW[i][0];break}}}
+if(!grp){document.body.innerHTML='<p style="padding:40px;font-family:sans-serif">Preview unavailable.</p>';return;}
+var T=L[grp];
+var GL={medical:'health practice',wellness:'wellbeing service',hypno:'hypnotherapy practice',nutrition:'nutrition service',massage:'massage & therapy',beauty:'beauty & grooming',pets:'pet care',trades:'trades & building',home_services:'home services',automotive:'car care',driving_school:'driving school',education:'tuition & lessons',gardens:'garden care',locksmith:'locksmith',moving:'removals',professional:'professional services',business:'local business'};
+if(!cat||/[^\u0000-\u024F]|[\u011F\u0131\u015F\u00E7\u00F6\u00FC\u00E3\u00F5\u00E9\u00E1]/.test(cat))cat=GL[grp].replace(/^./,function(c){return c.toUpperCase()});
+var katLow=cat.toLowerCase();
+var f=function(s){return String(s).replace(/\{n\}/g,name).replace(/\{c\}/g,city).replace(/\{k\}/g,katLow)};
+var pad=function(n){return(n<10?'0':'')+n};
+var IMG='https://business-previews-2026.vercel.app/assets/images/';
+var U=function(id){return 'https://images.unsplash.com/photo-'+id+'?auto=format&fit=crop&w=1800&q=75'};
+var LC=function(g,ns){return ns.map(function(n){var p=(g==='driving_school')?'ukdrive-hero-':g+'_hero_';return IMG+g+'/hero/'+p+(n<10?'0':'')+n+'.webp'})};
+var PH={
+ medical:['1649751361457-01d3a696c7e6','1706353399656-210cca727a33','1768507423533-b87b62769758','1519823551278-64ac92734fb1','1758273241078-8eec353836be','1758691462126-2ee47c8bf9e7'].map(U),
+ beauty:['1634449571010-02389ed0f9b0','1761839256791-6a93f89fb8b0','1580618672591-eb180b1a973f','1605497788044-5a32c7078486','1560869713-7d0a29430803','1616394584738-fc6e612e71b9','1761718210089-ba3bb5ccb54f','1788328155052-e02abe9ba983'].map(U),
+ trades:['1788330937134-f0eb99133077','1630683924997-fe27050a0416','1595844730289-b248c919d6f9','1635424709845-3a85ad5e1f5e','1643225523483-e2c434191bba','1676210134188-4c05dd172f89','1542013936693-884638332954','1772442198677-10c8e7b46a5f','1621905251189-08b45d6a269e','1660330589693-99889d60181e','1562259949-e8e7689d7828','1456086272160-b28b0645b729'].map(U),
+ gardens:['1784293449032-200db587788c','1597201278257-3687be27d954','1783451439661-152793447cbf','1668120089662-42642838cfef','1734303023491-db8037a21f09','1734079692079-aae7e24a7035','1773244398609-a4085e26b7c6','1585320806297-9794b3e4eeae','1761839259494-71caddcdd6b3','1622383563227-04401ab4e5ea'].map(U),
+ moving:['1730154838368-c37b1fdebcf6','1758523671285-9ff3f4e0ff38','1714647211902-bb711d643a17','1758523671071-4e3c43d055e6','1522444195799-478538b28823'].map(U).concat(LC('moving',[1,2,4,8])),
+ hypno:LC('wellness',[1,2,4,7,9]).concat(['1648542036561-e1d66a5ae2b1'].map(U)),
+ wellness:LC('wellness',[1,2,4,7,9]).concat(['1648542036561-e1d66a5ae2b1','1758875569256-f37c438cac65','1758875568932-0eefd3e60090'].map(U)),
+ nutrition:LC('nutrition',[1,2,6,7,8]),
+ automotive:LC('automotive',[1,2,3,4,6,8,9]),
+ pets:LC('pets',[1,2,3,4,5,7,8,10]),
+ massage:LC('massage',[1,2,4,5,6,7,8,9]),
+ locksmith:LC('locksmith',[1,4,6,7,8]),
+ driving_school:LC('driving_school',[1,2,3,4,5]),
+ education:LC('education',[1,5,6,7,9,10]),
+ home_services:LC('home_services',[1,2,5,6,8,9]),
+ business:LC('business',[1,3,5,7,9]),
+ professional:LC('professional',[1,2,3,4,5,8])
+};
+var P=PH[grp]||PH.business, hs=0; for(var q=0;q<name.length;q++)hs+=name.charCodeAt(q);
+var pick=function(k){return P[(hs+k)%P.length]};
+var hero=pick(0), about=pick(1), galImgs=[pick(2),pick(3),pick(4),pick(5)], bandImg=pick(6);
+document.documentElement.setAttribute('data-theme',b.theme||'calm');
+document.documentElement.style.setProperty('--hero','url("'+hero+'")');
+document.title=name+' | Website preview';
 
-  document.querySelectorAll("[data-t]").forEach(function (e) { e.textContent = get(e.getAttribute("data-t")); });
+var tel=b.phoneTel||'', ph=b.phone||'';
+if(ph&&!/^(\+44|0044|0)/.test(ph.replace(/[\s()-]/g,''))){tel='';ph='';}
+if(ph&&!tel)tel=ph.replace(/[\s()-]/g,'').replace(/^0044/,'+44').replace(/^0/,'+44');
+$('ini').textContent=b.initials||name.slice(0,2).toUpperCase(); $('lname').textContent=name; $('cname').textContent=name;
+var maps=b.mapsLink||('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(name+' '+(b.address||'')+' '+(b.postcode||'')));
+if(tel){$('navcall').href='tel:'+tel;$('navtxt').textContent='Call now';}else{$('navtxt').textContent='Contact';}
+var callBtn=function(cls){return tel?'<a class="btn '+cls+'" href="tel:'+esc(tel)+'">'+IC.phone+' Call '+esc(ph)+'</a>':'<a class="btn '+cls+'" href="#contact">Get in touch</a>'};
+var dirBtn=function(cls){return '<a class="btn '+cls+'" href="'+esc(maps)+'" target="_blank" rel="noopener">'+IC.pin+' Get directions</a>'};
 
-  var tel = String(b.phoneTel || "").replace(/[^+0-9]/g, "");
-  document.querySelectorAll("[data-tel]").forEach(function (a) { if (tel) a.setAttribute("href", "tel:" + tel); else a.style.display = "none"; });
+$('pill').textContent='Complimentary website preview · Created exclusively for '+name;
+$('h-eye').textContent=cat+' · '+city;
+var h=f(Array.isArray(T.h)?T.h[hs%T.h.length]:T.h); $('h1').textContent=h;
+$('h-sub').textContent=f(T.s);
+$('h-cta').innerHTML=callBtn('b-acc')+dirBtn('b-line');
+var proof='';
+if(b.rating&&+b.rating>0){proof+='<span><span class="stars">★★★★★</span> '+esc(b.rating)+' on Google'+(b.reviews?' · '+esc(b.reviews)+' reviews':'')+'</span>';}
+proof+='<span>'+IC.pin+' '+esc(city)+(b.postcode?', '+esc(b.postcode.split(' ')[0]):'')+'</span><span>'+IC.clock+' Get in touch to arrange a time</span>';
+$('proof').innerHTML=proof;
 
-  var maps = safeUrl(b.mapsLink) || ("https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent([b.name, b.address, b.postcode].filter(Boolean).join(" ")));
-  document.querySelectorAll("[data-maps]").forEach(function (a) { a.setAttribute("href", maps); });
-  var rev = safeUrl(b.reviewsLink) || maps;
-  document.querySelectorAll("[data-reviews]").forEach(function (a) { a.setAttribute("href", rev); });
+var tags=T.sv.map(function(x){return x[0]}), tr='';
+for(var r=0;r<2;r++)tr+=tags.concat(tags).map(function(x){return '<span>'+esc(x)+'</span><i>/</i>'}).join('');
+$('track').innerHTML=tr;
 
-  var rating = parseFloat(b.rating), hasReviews = !isNaN(rating) && rating > 0 && parseInt(b.reviews, 10) > 0;
-  document.body.setAttribute("data-reviews", hasReviews ? "yes" : "no");
-  if (hasReviews) ["stars", "stars2"].forEach(function (id) { var s = document.getElementById(id); if (s) s.style.setProperty("--p", Math.min(100, rating / 5 * 100) + "%"); });
+$('about-img').style.backgroundImage='url("'+about+'")';
+$('a-h').textContent='Meet '+name+'.';
+$('a-p').innerHTML=T.a.map(function(p){return '<p>'+esc(f(p))+'</p>'}).join('');
+$('ticks').innerHTML=T.tk.map(function(t){return '<li>'+IC.tick+'<span>'+esc(f(t))+'</span></li>'}).join('');
+$('a-cta').innerHTML=callBtn('b-dark');
 
-  var mark = document.querySelector(".mark"); if (mark && !mark.textContent) mark.textContent = (b.name || "").slice(0, 2).toUpperCase();
+$('s-h').textContent='One '+katLow+', everything you need.';
+$('s-p').textContent='Here is how '+name+' can help you.';
+$('cards').innerHTML=T.sv.map(function(s,i){return '<div class="card"><div class="ic">'+IC[ICS[i%6]]+'</div><h3>'+esc(f(s[0]))+'</h3><p>'+esc(f(s[1]))+'</p></div>'}).join('');
+$('steps').innerHTML=T.st.map(function(s,i){return '<div class="step"><b>'+pad(i+1)+'</b><h3>'+esc(s[0])+'</h3><p>'+esc(f(s[1]))+'</p></div>'}).join('');
 
-  var line = [b.address, b.city, b.postcode].filter(Boolean).join(", ");
-  document.getElementById("addr-line").textContent = line;
-  document.getElementById("addr-contact").textContent = line;
-  var blk = document.getElementById("addr-block"); [b.address, b.city, b.postcode].filter(Boolean).forEach(function (t, i) { if (i) blk.appendChild(document.createElement("br")); blk.appendChild(document.createTextNode(t)); });
+$('g-h').textContent='A look at what to expect.';
+var g='';galImgs.forEach(function(u){g+='<div style="background-image:url(\''+u+'\')"></div>'});$('gal').innerHTML=g;
+$('band-img').style.backgroundImage='url("'+bandImg+'")';
+$('b-h').textContent=f(T.ct); $('b-p').textContent=f(T.cp); $('b-cta').innerHTML=callBtn('b-acc');
 
-  var services = (c.services || []).filter(function (s) { return s && s.t; });
-  var strip = document.getElementById("strip"), cards = document.getElementById("cards");
-  services.forEach(function (s, i) {
-    var a = el("a", null, s.t); a.href = "#services"; strip.appendChild(a);
-    var card = el("article", "card"); card.appendChild(el("div", "icon", String(i + 1).padStart(2, "0"))); card.appendChild(el("h3", null, s.t)); card.appendChild(el("p", null, s.d || "")); cards.appendChild(card);
-  });
-  if (!services.length) { var st = document.querySelector(".strip"); if (st) st.style.display = "none"; }
+if(b.rating&&+b.rating>0){
+  $('r-h').textContent='Rated '+b.rating+' on Google.';
+  $('revbox').innerHTML='<div><div class="big">'+esc(b.rating)+'</div><span class="stars">★★★★★</span></div><div><h3 style="font-size:26px;margin-bottom:8px">'+(b.reviews?esc(b.reviews)+' Google reviews':'Google reviews')+'</h3><p style="color:var(--muted);margin:0 0 20px">Real feedback from real customers of '+esc(name)+'. See what people say on Google.</p><a class="btn b-dark" href="'+esc(b.reviewsLink||maps)+'" target="_blank" rel="noopener">Read the reviews on Google</a></div>';
+}else{
+  $('r-h').textContent='Your reviews, front and centre.';
+  $('revbox').innerHTML='<div><div class="big" style="font-size:64px">★★★★★</div></div><div><h3 style="font-size:26px;margin-bottom:8px">Show off your best reviews here</h3><p style="color:var(--muted);margin:0">Once this website is yours, your Google reviews can be displayed on this page to build trust with new customers.</p></div>';
+}
+$('faqs').innerHTML=T.fq.map(function(q){return '<details><summary>'+esc(q[0])+'</summary><p>'+esc(f(q[1]))+'</p></details>'}).join('');
+$('c-h').textContent=f(T.ct); $('c-p').textContent=f(T.cp);
+$('c-cta').innerHTML=callBtn('b-dark')+dirBtn('b-line');
 
-  var faq = document.getElementById("faq-list");
-  (c.faq || []).filter(function (f) { return f && f.q && f.a; }).forEach(function (f, i) {
-    var d = el("details"); if (i === 0) d.open = true; d.appendChild(el("summary", null, f.q)); d.appendChild(el("p", null, f.a)); faq.appendChild(d);
-  });
+$('k-h').textContent="Let's talk.";
+$('k-p').textContent='Call, message or visit '+name+'. We would love to hear from you.';
+var addr=[b.address,b.postcode].filter(Boolean).join(', ');
+var info='';
+if(tel)info+='<a href="tel:'+esc(tel)+'">'+IC.phone+'<div><small>Call</small><strong>'+esc(ph)+'</strong></div></a>';
+if(addr)info+='<a href="'+esc(maps)+'" target="_blank" rel="noopener">'+IC.pin+'<div><small>Find us</small><strong>'+esc(addr)+'</strong></div></a>';
+$('info').innerHTML=info;
+$('send').onclick=function(){$('fnote').textContent='This is a preview, so the message was not sent. Click "Make this website mine" to activate your live form.';$('fnote').style.color='var(--acc)'};
+$('foot').textContent='© '+name+(city?' · '+city:'');
 
-  var claim = document.querySelector(".sticky-claim"), seen = 0;
-  if (claim && "IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { seen += en.isIntersecting ? 1 : -1; if (seen < 0) seen = 0; });
-      claim.classList.toggle("is-hidden", seen > 0);
-    }, { threshold: 0.35 });
-    document.querySelectorAll(".panel-dark, .final-cta").forEach(function (t) { io.observe(t); });
-  }
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener("click", function (e) { var t = document.querySelector(this.getAttribute("href")); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth" }); } });
-  });
+var slug=(location.pathname.split('/').filter(Boolean).pop()||'');
+$('claim').href='https://goldrivermarketing.co.uk/contact?preview='+encodeURIComponent(slug)+'&business='+encodeURIComponent(name);
 })();
 </script>
 </body>
