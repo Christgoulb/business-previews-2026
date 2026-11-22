@@ -528,5 +528,25 @@ document.documentElement.setAttribute('data-qa',qa.length?'fail: '+qa.join('; ')
 document.documentElement.setAttribute('data-group',grp);document.documentElement.setAttribute('data-imgset',imgset);
 })();
 </script>
+<!-- grm-scan-ping -->
+<script>
+/* Gold River: ping Chris's GHL when a preview is opened (once per visitor per page per day) */
+(function(){try{
+if(window.self!==window.top)return; /* ignore carousel/iframe embeds */
+var q=location.search,ls=window.localStorage;
+if(/[?&]me=1/.test(q))ls.setItem('grm_me','1'); /* open once with ?me=1 to mute your own browser */
+if(ls.getItem('grm_me'))return;
+if(/bot|crawl|spider|preview|facebookexternalhit|whatsapp|slack|telegram|discord|headless|lighthouse/i.test(navigator.userAgent))return;
+var k='grm_ping_'+location.pathname+'_'+new Date().toISOString().slice(0,10);
+if(ls.getItem(k))return;ls.setItem(k,'1');
+var b=(window.D&&D.b)||{},ref=document.referrer||'';
+var slug=location.pathname.split('/').filter(Boolean).pop()||'';
+var src=/[?&]s=qr/.test(q)?'QR scan':(ref?'link from '+ref.replace(/^https?:\/\//,'').split('/')[0]:'QR scan or typed link');
+var d={business:b.name||slug,slug:slug,lead:b.lead||'',page:location.origin+location.pathname,source:src,device:/Mobi/i.test(navigator.userAgent)?'mobile':'desktop',time:new Date().toLocaleString('en-GB',{timeZone:'Europe/London'})};
+var H='https://services.leadconnectorhq.com/hooks/hWSIme6JCT71Wbw3L9IX/webhook-trigger/a7739024-d49d-48be-8e0b-45149c2825a5';
+fetch(H,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d),keepalive:true})
+.catch(function(){fetch(H,{method:'POST',mode:'no-cors',body:new URLSearchParams(d),keepalive:true});});
+}catch(e){}})();
+</script>
 </body>
 </html>
